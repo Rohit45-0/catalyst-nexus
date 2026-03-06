@@ -1,0 +1,4 @@
+Connecting to Upstash Redis (TLS)...
+PING response: True
+SET/GET test: phase2_ready
+SUCCESS

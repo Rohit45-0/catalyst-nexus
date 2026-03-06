@@ -1,0 +1,34 @@
+{
+  "vault_id": "227914ac-e66d-4269-a1a0-916c9b80cf0b",
+  "visual_dna": {
+    "product_category": "laptop",
+    "product_name": "sleek thin laptop with a large display",
+    "brand": "unknown",
+    "model": "unknown",
+    "materials": {
+      "primary": "metal",
+      "secondary": "plastic",
+      "finish": "matte"
+    },
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#565656",
+      "accent": "#AB69CC"
+    },
+    "geometry": {
+      "shape": "rectangular",
+      "edges": "rounded",
+      "thickness": "ultra-thin",
+      "aspect_ratio": "16:9"
+    },
+    "distinctive_features": [
+      "edge-to-edge display",
+      "minimal bezels",
+      "compact keyboard"
+    ],
+    "texture_description": "Smooth matte metal body with a subtle grain, featuring a polished screen area.",
+    "lighting_observed": "natural",
+    "identity_fingerprint": "A premium, ultra-thin laptop showcasing a modern design with minimal bezels, edge-to-edge display, and a matte metal body, ideal for sleek portability and elegant functionality."
+  },
+  "source_image": "D:\\Catalyst Nexus\\896332-2560x1440-desktop-hd-laptop-background-image.jpg"
+}

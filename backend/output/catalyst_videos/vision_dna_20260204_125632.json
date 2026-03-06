@@ -1,0 +1,45 @@
+{
+  "product_category": "laptop",
+  "product_description": "This is a sleek and modern laptop with an ultra-thin bezel design, offering a nearly edge-to-edge display. The screen showcases vibrant colors and high resolution, making it ideal for creative tasks and media consumption. The keyboard is compact and minimalistic, blending seamlessly with the overall design. Its lightweight and portable build make it suitable for on-the-go use, while the premium materials ensure durability and a professional aesthetic.",
+  "brand_detected": "unknown",
+  "materials": {
+    "primary": "metal",
+    "surface_finish": "matte",
+    "colors": [
+      "black",
+      "gray"
+    ],
+    "reflectivity": "low"
+  },
+  "lighting": {
+    "type": "natural",
+    "direction": "side",
+    "mood": "cool"
+  },
+  "structure": {
+    "shape": "rectangular with rounded edges",
+    "key_features": [
+      "ultra-thin bezels",
+      "high-resolution display",
+      "compact keyboard"
+    ],
+    "orientation": "open and angled slightly upward"
+  },
+  "video_recommendations": {
+    "camera_movements": [
+      "slow pan across the keyboard",
+      "zoom into the display",
+      "360-degree rotation around the laptop"
+    ],
+    "focus_points": [
+      "edge-to-edge display",
+      "sleek keyboard design",
+      "thin and portable build"
+    ],
+    "mood_keywords": [
+      "modern",
+      "elegant",
+      "professional"
+    ]
+  }
+}

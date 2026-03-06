@@ -1,0 +1,78 @@
+# =============================================================================
+# Catalyst Nexus Core - Worker Node Dockerfile
+# =============================================================================
+# For GPU-enabled worker nodes that run local AI models
+# =============================================================================
+
+FROM nvidia/cuda:12.1.0-runtime-ubuntu22.04 as base
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONFAULTHANDLER=1 \
+    DEBIAN_FRONTEND=noninteractive
+
+# Install Python and system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    python3.11 \
+    python3.11-venv \
+    python3.11-dev \
+    python3-pip \
+    build-essential \
+    libpq-dev \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
+    ffmpeg \
+    git \
+    wget \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create symlinks for Python
+RUN ln -sf /usr/bin/python3.11 /usr/bin/python \
+    && ln -sf /usr/bin/python3.11 /usr/bin/python3
+
+WORKDIR /app
+
+# Install PyTorch with CUDA support
+RUN pip install --no-cache-dir \
+    torch \
+    torchvision \
+    torchaudio \
+    --index-url https://download.pytorch.org/whl/cu121
+
+# Install ML dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Install additional ML packages for local inference
+RUN pip install --no-cache-dir \
+    diffusers \
+    transformers \
+    accelerate \
+    safetensors \
+    xformers
+
+# Copy application code
+COPY backend/ ./backend/
+
+# Create non-root user
+RUN useradd --create-home --shell /bin/bash appuser \
+    && chown -R appuser:appuser /app
+
+# Create directories for models
+RUN mkdir -p /app/models /app/cache \
+    && chown -R appuser:appuser /app/models /app/cache
+
+USER appuser
+
+# Environment for model caching
+ENV HF_HOME=/app/cache \
+    TRANSFORMERS_CACHE=/app/cache \
+    TORCH_HOME=/app/cache
+
+# Expose port for local model server
+EXPOSE 7860
+
+# Default command - can be overridden
+CMD ["python", "-m", "backend.app.agents.neural_render"]

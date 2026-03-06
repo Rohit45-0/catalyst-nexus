@@ -1,0 +1,6 @@
+Loading data...
+Loaded 2000 samples, 2000 with content features
+Model: 14,651 total params (1,408 in content branch)
+
+Training 80 epochs, LR=0.005, weight_decay=1e-4
+============================================================

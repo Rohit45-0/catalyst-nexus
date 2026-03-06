@@ -1,0 +1,232 @@
+{
+  "category_trend_analysis": {
+    "category": "wireless headphones",
+    "platform": "youtube",
+    "region_code": "IN",
+    "data_source": "youtube_data_api",
+    "top_posts": [
+      {
+        "platform": "youtube",
+        "post_id": "Au-YPLfwc8g",
+        "title": "P9 Bluetooth Headphones - Wireless Over-Ear Headset with Deep Bass, Long Battery only \u20b9250 happy \ud83d\ude0a",
+        "url": "https://www.youtube.com/watch?v=Au-YPLfwc8g",
+        "author": "Rj Mobile 01",
+        "published_at": "2025-04-16T11:30:16Z",
+        "views": 50536707,
+        "likes": 1074374,
+        "comments": 2338,
+        "engagement_rate": 0.021305543315277745
+      },
+      {
+        "platform": "youtube",
+        "post_id": "R9MLiaZPmSE",
+        "title": "The Super Useful \u20b9100 Gadget from Amazon!",
+        "url": "https://www.youtube.com/watch?v=R9MLiaZPmSE",
+        "author": "Beebom",
+        "published_at": "2023-06-02T12:28:44Z",
+        "views": 28799758,
+        "likes": 960962,
+        "comments": 8184,
+        "engagement_rate": 0.03365118554121184
+      },
+      {
+        "platform": "youtube",
+        "post_id": "qaI_QbxDbxo",
+        "title": "\ud83c\udfa7P9 Wireless On Ear Headphones Deep Bass Plus Headset with Microph.only \u20b9250",
+        "url": "https://www.youtube.com/watch?v=qaI_QbxDbxo",
+        "author": "Rj Mobile 01",
+        "published_at": "2025-10-22T02:30:45Z",
+        "views": 26877287,
+        "likes": 252683,
+        "comments": 345,
+        "engagement_rate": 0.009414194222802324
+      },
+      {
+        "platform": "youtube",
+        "post_id": "BuJTzm7MHns",
+        "title": "Can Dyson Headphones Save NEW YORK!?!",
+        "url": "https://www.youtube.com/watch?v=BuJTzm7MHns",
+        "author": "JerryRigEverything",
+        "published_at": "2023-06-08T20:17:43Z",
+        "views": 22383586,
+        "likes": 1068055,
+        "comments": 9623,
+        "engagement_rate": 0.04814590477146959
+      },
+      {
+        "platform": "youtube",
+        "post_id": "TRXShIMMm7s",
+        "title": "Ultra pods Pro True Wireless Bluetooth Earbuds with \ufffcLCD Display \ufffc Working \ufffc\ufffc\ufffc screen touch \ud83e\udd17",
+        "url": "https://www.youtube.com/watch?v=TRXShIMMm7s",
+        "author": "Rj Mobile 01",
+        "published_at": "2024-11-14T02:30:15Z",
+        "views": 21711367,
+        "likes": 594808,
+        "comments": 2155,
+        "engagement_rate": 0.027495412886715056
+      },
+      {
+        "platform": "youtube",
+        "post_id": "kwSxdGTGwmk",
+        "title": "\u20b9600 wale Airpods Max ne \u20b960000 walo ko piche chhod diya \ud83e\udd2f\ud83d\udd25 #techplusgadgets #airpodsmax #shorts",
+        "url": "https://www.youtube.com/watch?v=kwSxdGTGwmk",
+        "author": "Tech Plus Gadgets",
+        "published_at": "2024-09-17T07:20:18Z",
+        "views": 19479749,
+        "likes": 903627,
+        "comments": 2018,
+        "engagement_rate": 0.04649161547204741
+      },
+      {
+        "platform": "youtube",
+        "post_id": "wRK8EpUZ4Ww",
+        "title": "World's Smallest Wireless Headphones? #shorts",
+        "url": "https://www.youtube.com/watch?v=wRK8EpUZ4Ww",
+        "author": "MostTechy Shorts",
+        "published_at": "2022-12-15T15:42:35Z",
+        "views": 16446692,
+        "likes": 569735,
+        "comments": 454,
+        "engagement_rate": 0.03466891700774843
+      },
+      {
+        "platform": "youtube",
+        "post_id": "LR9bImOZKqk",
+        "title": "Connect Two wired/wireless Headphones in one Phone! #Shorts",
+        "url": "https://www.youtube.com/watch?v=LR9bImOZKqk",
+        "author": "MostTechy Shorts",
+        "published_at": "2021-08-24T10:46:46Z",
+        "views": 13953392,
+        "likes": 924713,
+        "comments": 1515,
+        "engagement_rate": 0.06638013179877696
+      },
+      {
+        "platform": "youtube",
+        "post_id": "MKNBHy6aQRw",
+        "title": "\u20b960000 Apple Headphone vs \u20b91500 Headphones #shorts",
+        "url": "https://www.youtube.com/watch?v=MKNBHy6aQRw",
+        "author": "Tech Master Shorts",
+        "published_at": "2023-07-01T13:45:01Z",
+        "views": 11032236,
+        "likes": 655086,
+        "comments": 970,
+        "engagement_rate": 0.0594671832618519
+      },
+      {
+        "platform": "youtube",
+        "post_id": "Gvvo6vUpJRc",
+        "title": "AirPods Max Review: Luxury Listening!",
+        "url": "https://www.youtube.com/watch?v=Gvvo6vUpJRc",
+        "author": "Marques Brownlee",
+        "published_at": "2020-12-16T01:37:02Z",
+        "views": 10220384,
+        "likes": 320187,
+        "comments": 23021,
+        "engagement_rate": 0.03358073434422816
+      }
+    ],
+    "top_keywords": [
+      "headphones",
+      "wireless",
+      "bluetooth",
+      "ear",
+      "headset",
+      "deep",
+      "bass",
+      "only",
+      "airpods",
+      "max",
+      "over",
+      "long"
+    ],
+    "recommended_hooks": [
+      "Stop wasting money on wireless headphones: do this headphones framework instead.",
+      "I tried 3 wireless headphones tactics in 7 days \u2014 only this wireless method worked.",
+      "Before you buy any wireless headphones solution, check this 10-second test."
+    ],
+    "content_gaps": [
+      "Few creators explain beginner mistakes around headphones, wireless, bluetooth.",
+      "Lack of side-by-side competitor breakdowns in wireless headphones.",
+      "Not enough transparent pricing/value comparison content."
+    ],
+    "posting_recommendations": [
+      "Publish 4-6 short-form pieces per week with first-frame product proof.",
+      "Current benchmark engagement-rate from sampled trends: 3.81%.",
+      "Test hooks in first 2 seconds and retain winning variants for paid boosts."
+    ],
+    "generated_at": "2026-02-14T05:48:31.591469"
+  },
+  "campaign_strategy": "Position boAt Wireless Headphones as the ultimate choice for Indian youth seeking high-quality sound, deep bass, and reliable battery life at an affordable price. Leverage trending keywords, content gaps, and hooks to create relatable and engaging campaigns targeting students, commuters, gamers, and fitness enthusiasts.",
+  "blog_ideas": [
+    "Why boAt Wireless Headphones Are Perfect for Indian Students: A Deep Dive into Features and Benefits",
+    "Commuter-Friendly Audio: How boAt Headphones Make Your Daily Travel Better",
+    "Gaming on a Budget: Experience Deep Bass and Long Battery Life with boAt Headphones",
+    "Fitness Meets Music: Best Wireless Headphones for Workouts in India",
+    "Affordable Audio Revolution: Comparing boAt Headphones to Premium Brands"
+  ],
+  "tweet_ideas": [
+    "\ud83c\udfa7 Say hello to deep bass, long battery life, and wireless freedom! boAt headphones are here to amp up your vibe. #boAtHeadphones #DeepBass",
+    "Students, gamers, commuters, fitness freaks\u2014boAt Wireless Headphones are made for YOU. Affordable, powerful, and stylish. #boAtLife #WirelessSound",
+    "Stop wasting money on overpriced headphones! Switch to boAt Wireless Headphones for quality sound at the best price. #AffordableAudio #boAtIndia",
+    "Long battery life + fast charging = uninterrupted jams. Experience boAt like never before. #MusicLovers #WirelessFreedom",
+    "Commuting in chaos? Cancel the noise with boAt Wireless Headphones and focus on what matters. #NoiseCancellation #boAtHeadphones",
+    "Gamers, level up your sound experience with boAt Wireless Headphones. Perfect for those long gaming sessions! \ud83c\udfae #GamingHeadphones #boAtLife",
+    "Fitness enthusiasts, your workout partner just got better! Sweat it out with boAt Wireless Headphones. #FitnessAudio #boAtIndia",
+    "Bass that hits deep, style that stands out\u2014boAt Wireless Headphones are your perfect match. #DeepBass #AffordableLuxury"
+  ],
+  "reel_ideas": [
+    "Show a student acing their study session with boAt Wireless Headphones, highlighting deep bass and focus-friendly design.",
+    "Create a commuter's journey featuring boAt headphones canceling out the noise while enjoying music or podcasts.",
+    "Gamers using boAt Wireless Headphones for immersive sound during intense gaming sessions.",
+    "Fitness enthusiasts running or working out with boAt headphones, showcasing sweat-resistant design and long battery life.",
+    "A fun 'day in the life' reel of someone using boAt headphones during various activities like studying, commuting, gaming, and working out."
+  ],
+  "short_video_ideas": [
+    "Side-by-side comparison of boAt Wireless Headphones vs premium brands like AirPods Max in sound quality and price.",
+    "Explaining beginner mistakes when choosing wireless headphones and why boAt overcomes them.",
+    "Quick demo of fast charging and long battery life features of boAt Wireless Headphones.",
+    "Highlighting deep bass with a music test using boAt headphones and competitor models.",
+    "A 10-second test to show the value of boAt Wireless Headphones for students and gamers."
+  ],
+  "poster_ideas": [
+    "Poster showcasing boAt headphones with the tagline: 'Deep Bass. Long Battery. Affordable Price.'",
+    "Fitness-themed poster featuring boAt headphones with 'Your Workout Partner' as the tagline.",
+    "Gaming-focused poster with the slogan: 'Level Up Your Sound Experience with boAt Wireless Headphones.'",
+    "Commuter-friendly poster with 'Cancel the Chaos, Enjoy the Journey with boAt.'",
+    "Student-focused poster with 'Study Smart, Jam Hard with boAt Wireless Headphones.'"
+  ],
+  "debug_transcript_insights": {
+    "video_count": 3,
+    "sampled_videos": [
+      {
+        "video_id": "Au-YPLfwc8g",
+        "title": "P9 Bluetooth Headphones - Wireless Over-Ear Headset with Deep Bass, Long Battery only \u20b9250 happy \ud83d\ude0a"
+      },
+      {
+        "video_id": "R9MLiaZPmSE",
+        "title": "The Super Useful \u20b9100 Gadget from Amazon!"
+      },
+      {
+        "video_id": "qaI_QbxDbxo",
+        "title": "\ud83c\udfa7P9 Wireless On Ear Headphones Deep Bass Plus Headset with Microph.only \u20b9250"
+      }
+    ],
+    "common_hook_lines": [
+      "\u0906\u0930\u091c\u0940 \u092d\u093e\u0908 \u0939\u0947\u0921\u092b\u094b\u0928 \u0939\u0948 \u0915\u094d\u092f\u093e \u0905\u092a\u0928\u0947 \u092a\u093e\u0938? \u0915\u094c\u0928 \u0938\u093e",
+      "if you use earbuds like these this 100",
+      "\u0906\u091c\u0942 \u092d\u093e\u0908, \u0905\u091c\u0942 \u092d\u093e\u0908, \u092e\u0948\u0902 \u0926\u093f\u0935\u093e\u0932\u0940 \u0915\u093e \u0911\u092b\u0930 \u0939\u0948"
+    ],
+    "common_cta_lines": [],
+    "common_phrases": [
+      "earbuds like",
+      "like these",
+      "use earbuds",
+      "these rupee",
+      "rupee gadget",
+      "gadget something",
+      "something absolutely",
+      "absolutely need"
+    ]
+  }
+}

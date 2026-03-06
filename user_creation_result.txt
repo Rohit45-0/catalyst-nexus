@@ -1,0 +1,2 @@
+User rohit.demo.catalyst@gmail.com already exists.
+✅ Password reset to: password123

@@ -1,0 +1,589 @@
+{
+  "identity_vault": {
+    "project_id": "5082ce6f-e5ff-4248-9187-0f4dd8c3c167",
+    "status": "stored",
+    "confidence": 0.98,
+    "visual_dna": {
+      "product_category": "deodorant",
+      "product_description": "The Fogg deodorant is a cylindrical body spray bottle designed for personal fragrance use. It features a sleek black body with gold accents and bold typography, emphasizing a premium and modern aesthetic. The product branding includes the Fogg logo, a crest emblem, and text indicating the fragrance type, such as 'Fresh Spicy' and 'Fresh Oriental.' The design is minimalistic yet striking, appealing to a sophisticated audience.",
+      "materials": {
+        "primary_material": "aluminum",
+        "secondary_materials": [
+          "plastic (cap)",
+          "paint coating"
+        ],
+        "surface_finish": "matte",
+        "transparency": "opaque",
+        "reflectivity": 0.2,
+        "texture_description": "Smooth and uniform surface with a matte finish.",
+        "color_palette": [
+          "#000000",
+          "#FFD700",
+          "#FF0000",
+          "#00FF00"
+        ]
+      },
+      "lighting": {
+        "primary_light_direction": "front",
+        "light_type": "studio",
+        "light_intensity": "medium",
+        "shadow_characteristics": "soft shadows around the base and sides",
+        "highlights": [
+          "on the curved edges of the bottle"
+        ],
+        "color_temperature": "neutral"
+      },
+      "structure": {
+        "overall_shape": "cylindrical with a slightly tapered top",
+        "dimensions_ratio": "tall/narrow",
+        "key_components": [
+          "main body",
+          "removable cap",
+          "spray nozzle"
+        ],
+        "symmetry": "symmetric",
+        "distinctive_features": [
+          "gold crest emblem",
+          "bold Fogg logo",
+          "color-coded fragrance indicators"
+        ],
+        "brand_elements": [
+          "logos",
+          "text",
+          "crest emblem"
+        ]
+      },
+      "motion_recommendations": [
+        "slow 360-degree rotation to showcase the branding and design",
+        "zoom in on the crest emblem and fragrance text for detail",
+        "pan from top to bottom to emphasize the sleek cylindrical shape"
+      ],
+      "camera_angle_suggestions": [
+        "front-facing angle to highlight the logo and text",
+        "slightly tilted top-down angle to show the cap and nozzle",
+        "side angle to emphasize the cylindrical shape and matte finish"
+      ],
+      "confidence_score": 0.98
+    },
+    "embedding_id": "80d7f075-0a3a-44c3-b1d2-0e8de0190877"
+  },
+  "market_intel": {
+    "trend_analysis": {
+      "category": "Fashion",
+      "platform": "youtube",
+      "region_code": "IN",
+      "data_source": "youtube_data_api",
+      "top_posts": [
+        {
+          "platform": "youtube",
+          "post_id": "j2PwnrH16xI",
+          "title": "Do You Know What These Clothes are Called? 👕🧦❓#learning #kidsvideo",
+          "url": "https://www.youtube.com/watch?v=j2PwnrH16xI",
+          "author": "MEOWJI",
+          "published_at": "2025-04-06T13:01:06Z",
+          "views": 530117196,
+          "likes": 2568886,
+          "comments": 0,
+          "engagement_rate": 0.004845883173350219
+        },
+        {
+          "platform": "youtube",
+          "post_id": "vgr2y70Vlk0",
+          "title": "Guru Randhawa: FASHION Video Song | Latest Punjabi Song 2016 | T-Series",
+          "url": "https://www.youtube.com/watch?v=vgr2y70Vlk0",
+          "author": "T-Series",
+          "published_at": "2016-09-20T07:41:17Z",
+          "views": 253089786,
+          "likes": 1219260,
+          "comments": 39544,
+          "engagement_rate": 0.004973744772141852
+        },
+        {
+          "platform": "youtube",
+          "post_id": "GuZiqstWfPI",
+          "title": "How to Start a Fashion Trend 😘",
+          "url": "https://www.youtube.com/watch?v=GuZiqstWfPI",
+          "author": "Alan's Universe",
+          "published_at": "2025-03-08T13:00:28Z",
+          "views": 167514711,
+          "likes": 4688713,
+          "comments": 15173,
+          "engagement_rate": 0.028080435275920333
+        },
+        {
+          "platform": "youtube",
+          "post_id": "z6QEfM8oFa0",
+          "title": "Best fashion show new dress and change dress fashion on tik tok 2025 #short #shortvideo short 1023",
+          "url": "https://www.youtube.com/watch?v=z6QEfM8oFa0",
+          "author": "Fix Fashion ",
+          "published_at": "2025-04-27T01:08:04Z",
+          "views": 145481014,
+          "likes": 894446,
+          "comments": 784,
+          "engagement_rate": 0.006153586474177311
+        },
+        {
+          "platform": "youtube",
+          "post_id": "1Jkr1HTy2LA",
+          "title": "Street Fashion Style #fashion #style",
+          "url": "https://www.youtube.com/watch?v=1Jkr1HTy2LA",
+          "author": "Street Outfit Style",
+          "published_at": "2025-06-14T14:55:01Z",
+          "views": 120183811,
+          "likes": 435795,
+          "comments": 5715,
+          "engagement_rate": 0.00367362289751321
+        },
+        {
+          "platform": "youtube",
+          "post_id": "kvGl0WuGNgo",
+          "title": "Love ❤️Dress from-Rathaj Fashion #reels",
+          "url": "https://www.youtube.com/watch?v=kvGl0WuGNgo",
+          "author": "Waziha's vlog",
+          "published_at": "2024-02-20T15:32:28Z",
+          "views": 104424700,
+          "likes": 2272098,
+          "comments": 8264,
+          "engagement_rate": 0.021837381385821555
+        },
+        {
+          "platform": "youtube",
+          "post_id": "yycVNcishrE",
+          "title": "Britney Manson - FΛSHION (Single, 2023)",
+          "url": "https://www.youtube.com/watch?v=yycVNcishrE",
+          "author": "Britney Manson",
+          "published_at": "2023-08-10T22:00:07Z",
+          "views": 86627312,
+          "likes": 795257,
+          "comments": 11783,
+          "engagement_rate": 0.009316230428574305
+        },
+        {
+          "platform": "youtube",
+          "post_id": "96ddiEnJeBw",
+          "title": "Gracie at our Baldtourage Fashion Show in LA! Who watched it live?!? #alopecia #baldtourage",
+          "url": "https://www.youtube.com/watch?v=96ddiEnJeBw",
+          "author": "Christie Val",
+          "published_at": "2025-07-10T03:46:38Z",
+          "views": 77835107,
+          "likes": 488864,
+          "comments": 1560,
+          "engagement_rate": 0.006300807166616987
+        },
+        {
+          "platform": "youtube",
+          "post_id": "c4fi50UeAPI",
+          "title": "Part - 1 Getting Ready For Our Sister’s Reception Function #shorts #fashion",
+          "url": "https://www.youtube.com/watch?v=c4fi50UeAPI",
+          "author": "Real Aman",
+          "published_at": "2023-03-11T08:56:00Z",
+          "views": 75199449,
+          "likes": 2035639,
+          "comments": 0,
+          "engagement_rate": 0.027069865897554647
+        },
+        {
+          "platform": "youtube",
+          "post_id": "6DgrL7Gt_kQ",
+          "title": "How is this a dress? 🤯 #dress #fashion #onlinevsreality #swealife",
+          "url": "https://www.youtube.com/watch?v=6DgrL7Gt_kQ",
+          "author": "Swealife",
+          "published_at": "2023-12-18T15:00:04Z",
+          "views": 70849998,
+          "likes": 1879456,
+          "comments": 0,
+          "engagement_rate": 0.026527255512413705
+        }
+      ],
+      "top_keywords": [
+        "fashion",
+        "dress",
+        "show",
+        "priyanka",
+        "chopra",
+        "kangna",
+        "ranawat",
+        "song",
+        "shion",
+        "change",
+        "short",
+        "our"
+      ],
+      "recommended_hooks": [
+        "Stop wasting money on Fashion: do this fashion framework instead.",
+        "I tried 3 Fashion tactics in 7 days — only this dress method worked.",
+        "Before you buy any Fashion solution, check this 10-second test."
+      ],
+      "content_gaps": [
+        "Few creators explain beginner mistakes around fashion, dress, show.",
+        "Lack of side-by-side competitor breakdowns in Fashion.",
+        "Not enough transparent pricing/value comparison content."
+      ],
+      "posting_recommendations": [
+        "Publish 4-6 short-form pieces per week with first-frame product proof.",
+        "Current benchmark engagement-rate from sampled trends: 1.39%.",
+        "Test hooks in first 2 seconds and retain winning variants for paid boosts."
+      ],
+      "generated_at": "2026-02-25T16:22:18.839010"
+    },
+    "competitor_handles": [
+      "Fashion trends",
+      "Fashion india"
+    ],
+    "competitor_analysis": [
+      {
+        "competitor": "Fashion trends",
+        "top_questions": [
+          "What hooks in Fashion trends are currently outperforming?"
+        ],
+        "complaints": [
+          "Few creators explain beginner mistakes around fashion, trend, fashiontrends.",
+          "Lack of side-by-side competitor breakdowns in Fashion trends.",
+          "Not enough transparent pricing/value comparison content."
+        ],
+        "viral_hooks": [
+          "Stop wasting money on Fashion trends: do this fashion framework instead.",
+          "I tried 3 Fashion trends tactics in 7 days — only this trend method worked.",
+          "Before you buy any Fashion trends solution, check this 10-second test."
+        ],
+        "opportunity_gap": "API-first trend scan (youtube_data_api). Top keywords: fashion, trend, fashiontrends, jeans, molina, start"
+      },
+      {
+        "competitor": "Fashion india",
+        "top_questions": [
+          "What hooks in Fashion india are currently outperforming?"
+        ],
+        "complaints": [
+          "Few creators explain beginner mistakes around fashion, india, dress.",
+          "Lack of side-by-side competitor breakdowns in Fashion india.",
+          "Not enough transparent pricing/value comparison content."
+        ],
+        "viral_hooks": [
+          "Stop wasting money on Fashion india: do this fashion framework instead.",
+          "I tried 3 Fashion india tactics in 7 days — only this india method worked.",
+          "Before you buy any Fashion india solution, check this 10-second test."
+        ],
+        "opportunity_gap": "API-first trend scan (youtube_data_api). Top keywords: fashion, india, dress, indian, modeling, wedding"
+      }
+    ]
+  },
+  "gap_analysis": {
+    "top_unanswered_questions": [
+      "What hooks in Fashion trends are currently outperforming?",
+      "What hooks in Fashion india are currently outperforming?"
+    ],
+    "top_complaints": [
+      "Few creators explain beginner mistakes around fashion, trend, fashiontrends.",
+      "Lack of side-by-side competitor breakdowns in Fashion trends.",
+      "Few creators explain beginner mistakes around fashion, india, dress.",
+      "Lack of side-by-side competitor breakdowns in Fashion india."
+    ],
+    "winning_hooks_from_market": [
+      "Stop wasting money on Fashion trends: do this fashion framework instead.",
+      "I tried 3 Fashion trends tactics in 7 days — only this trend method worked.",
+      "Stop wasting money on Fashion india: do this fashion framework instead.",
+      "I tried 3 Fashion india tactics in 7 days — only this india method worked."
+    ],
+    "market_gaps": [
+      "Few creators explain beginner mistakes around fashion, dress, show.",
+      "Lack of side-by-side competitor breakdowns in Fashion.",
+      "Not enough transparent pricing/value comparison content."
+    ],
+    "recommended_positioning": "Objective: Position Fogg Deodorant as the ultimate accessory for Indian men who want to exude effortless style, confidence, and individuality. | Tone Of Voice: Sophisticated yet approachable, bold and empowering, with a touch of playful modernity. | Key Triggers: {'social_proof': 'Highlight testimonials, influencer endorsements, and user-generated content.', 'identity_and_exclusivity': 'Emphasize Fogg Deodorant as a symbol of personal style and exclusivity.', 'sensory_appeal': 'Focus on the long-lasting fragrance experience and sensory allure.', 'confidence_boost': 'Position Fogg Deodorant as a tool for enhancing confidence in social and fashion-forward scenarios.', 'FOMO': 'Create urgency with limited-time offers and exclusive seasonal collections.'} | Visual Identity: {'color_palette': ['#000000', '#FFD700', '#FF0000', '#00FF00'], 'design_elements': ['gold crest emblem', 'bold Fogg logo', 'matte finish', 'color-coded fragrance indicators'], 'motion_recommendations': ['360-degree rotation of product', 'zoom-in on crest emblem', 'pan top-to-bottom to highlight sleek design']} | Content Formats: ['Short-form video', 'Carousel posts', 'Interactive stories', 'Blog content', 'Email campaigns', 'Influencer collaborations', 'User-generated content']\n\nIdentity context: Product image attached (fog.webp)."
+  },
+  "competitor_matrix": [
+    {
+      "source": "competitor",
+      "title": "Do You Know What These Clothes are Called? 👕🧦❓#learning #kidsvideo",
+      "author": "MEOWJI",
+      "views": 530117196,
+      "engagement_rate": 0.0048,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Guru Randhawa: FASHION Video Song | Latest Punjabi Song 2016 | T-Series",
+      "author": "T-Series",
+      "views": 253089786,
+      "engagement_rate": 0.005,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "How to Start a Fashion Trend 😘",
+      "author": "Alan's Universe",
+      "views": 167514711,
+      "engagement_rate": 0.0281,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Best fashion show new dress and change dress fashion on tik tok 2025 #short #shortvideo short 1023",
+      "author": "Fix Fashion ",
+      "views": 145481014,
+      "engagement_rate": 0.0062,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Street Fashion Style #fashion #style",
+      "author": "Street Outfit Style",
+      "views": 120183811,
+      "engagement_rate": 0.0037,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Love ❤️Dress from-Rathaj Fashion #reels",
+      "author": "Waziha's vlog",
+      "views": 104424700,
+      "engagement_rate": 0.0218,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Britney Manson - FΛSHION (Single, 2023)",
+      "author": "Britney Manson",
+      "views": 86627312,
+      "engagement_rate": 0.0093,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Gracie at our Baldtourage Fashion Show in LA! Who watched it live?!? #alopecia #baldtourage",
+      "author": "Christie Val",
+      "views": 77835107,
+      "engagement_rate": 0.0063,
+      "score": 100.0
+    },
+    {
+      "source": "our_campaign",
+      "title": "fogg deodrant ",
+      "author": "Catalyst Nexus AI",
+      "views": null,
+      "engagement_rate": null,
+      "score": 99.0,
+      "benchmark": 95.0,
+      "uplift_percent": 4.21
+    }
+  ],
+  "scoring": {
+    "ai_score": 99.0,
+    "competitor_score": 95.0,
+    "uplift_percent": 4.21,
+    "verdict": "Ranked above competitor benchmark",
+    "factors": [
+      "Gap coverage: 12.5%",
+      "Hook strength signal: 0.36",
+      "CTA density signal: 0.56",
+      "Urgency signal: 0.18",
+      "Idea volume bonus: 5.0"
+    ],
+    "feature_vector": {
+      "hook_strength": 0.3633,
+      "cta_density": 0.5555,
+      "sentiment_score": 0.7375,
+      "question_density": 0.0782,
+      "urgency_score": 0.1805,
+      "phrase_diversity": 0.1984,
+      "avg_segment_length": 0.4218,
+      "keyword_density": 0.269
+    }
+  },
+  "campaign": {
+    "category_trend_analysis": {
+      "category": "Fashion",
+      "platform": "youtube",
+      "region_code": "IN",
+      "data_source": "youtube_data_api",
+      "top_posts": [
+        {
+          "platform": "youtube",
+          "post_id": "j2PwnrH16xI",
+          "title": "Do You Know What These Clothes are Called? 👕🧦❓#learning #kidsvideo",
+          "url": "https://www.youtube.com/watch?v=j2PwnrH16xI",
+          "author": "MEOWJI",
+          "published_at": "2025-04-06T13:01:06Z",
+          "views": 530117196,
+          "likes": 2568886,
+          "comments": 0,
+          "engagement_rate": 0.004845883173350219
+        },
+        {
+          "platform": "youtube",
+          "post_id": "vgr2y70Vlk0",
+          "title": "Guru Randhawa: FASHION Video Song | Latest Punjabi Song 2016 | T-Series",
+          "url": "https://www.youtube.com/watch?v=vgr2y70Vlk0",
+          "author": "T-Series",
+          "published_at": "2016-09-20T07:41:17Z",
+          "views": 253089786,
+          "likes": 1219260,
+          "comments": 39544,
+          "engagement_rate": 0.004973744772141852
+        },
+        {
+          "platform": "youtube",
+          "post_id": "GuZiqstWfPI",
+          "title": "How to Start a Fashion Trend 😘",
+          "url": "https://www.youtube.com/watch?v=GuZiqstWfPI",
+          "author": "Alan's Universe",
+          "published_at": "2025-03-08T13:00:28Z",
+          "views": 167514711,
+          "likes": 4688713,
+          "comments": 15173,
+          "engagement_rate": 0.028080435275920333
+        },
+        {
+          "platform": "youtube",
+          "post_id": "z6QEfM8oFa0",
+          "title": "Best fashion show new dress and change dress fashion on tik tok 2025 #short #shortvideo short 1023",
+          "url": "https://www.youtube.com/watch?v=z6QEfM8oFa0",
+          "author": "Fix Fashion ",
+          "published_at": "2025-04-27T01:08:04Z",
+          "views": 145481014,
+          "likes": 894446,
+          "comments": 784,
+          "engagement_rate": 0.006153586474177311
+        },
+        {
+          "platform": "youtube",
+          "post_id": "1Jkr1HTy2LA",
+          "title": "Street Fashion Style #fashion #style",
+          "url": "https://www.youtube.com/watch?v=1Jkr1HTy2LA",
+          "author": "Street Outfit Style",
+          "published_at": "2025-06-14T14:55:01Z",
+          "views": 120183811,
+          "likes": 435795,
+          "comments": 5715,
+          "engagement_rate": 0.00367362289751321
+        },
+        {
+          "platform": "youtube",
+          "post_id": "kvGl0WuGNgo",
+          "title": "Love ❤️Dress from-Rathaj Fashion #reels",
+          "url": "https://www.youtube.com/watch?v=kvGl0WuGNgo",
+          "author": "Waziha's vlog",
+          "published_at": "2024-02-20T15:32:28Z",
+          "views": 104424700,
+          "likes": 2272098,
+          "comments": 8264,
+          "engagement_rate": 0.021837381385821555
+        },
+        {
+          "platform": "youtube",
+          "post_id": "yycVNcishrE",
+          "title": "Britney Manson - FΛSHION (Single, 2023)",
+          "url": "https://www.youtube.com/watch?v=yycVNcishrE",
+          "author": "Britney Manson",
+          "published_at": "2023-08-10T22:00:07Z",
+          "views": 86627312,
+          "likes": 795257,
+          "comments": 11783,
+          "engagement_rate": 0.009316230428574305
+        },
+        {
+          "platform": "youtube",
+          "post_id": "96ddiEnJeBw",
+          "title": "Gracie at our Baldtourage Fashion Show in LA! Who watched it live?!? #alopecia #baldtourage",
+          "url": "https://www.youtube.com/watch?v=96ddiEnJeBw",
+          "author": "Christie Val",
+          "published_at": "2025-07-10T03:46:38Z",
+          "views": 77835107,
+          "likes": 488864,
+          "comments": 1560,
+          "engagement_rate": 0.006300807166616987
+        },
+        {
+          "platform": "youtube",
+          "post_id": "c4fi50UeAPI",
+          "title": "Part - 1 Getting Ready For Our Sister’s Reception Function #shorts #fashion",
+          "url": "https://www.youtube.com/watch?v=c4fi50UeAPI",
+          "author": "Real Aman",
+          "published_at": "2023-03-11T08:56:00Z",
+          "views": 75199449,
+          "likes": 2035639,
+          "comments": 0,
+          "engagement_rate": 0.027069865897554647
+        },
+        {
+          "platform": "youtube",
+          "post_id": "6DgrL7Gt_kQ",
+          "title": "How is this a dress? 🤯 #dress #fashion #onlinevsreality #swealife",
+          "url": "https://www.youtube.com/watch?v=6DgrL7Gt_kQ",
+          "author": "Swealife",
+          "published_at": "2023-12-18T15:00:04Z",
+          "views": 70849998,
+          "likes": 1879456,
+          "comments": 0,
+          "engagement_rate": 0.026527255512413705
+        }
+      ],
+      "top_keywords": [
+        "fashion",
+        "dress",
+        "show",
+        "priyanka",
+        "chopra",
+        "kangna",
+        "ranawat",
+        "song",
+        "shion",
+        "change",
+        "short",
+        "our"
+      ],
+      "recommended_hooks": [
+        "Stop wasting money on Fashion: do this fashion framework instead.",
+        "I tried 3 Fashion tactics in 7 days — only this dress method worked.",
+        "Before you buy any Fashion solution, check this 10-second test."
+      ],
+      "content_gaps": [
+        "Few creators explain beginner mistakes around fashion, dress, show.",
+        "Lack of side-by-side competitor breakdowns in Fashion.",
+        "Not enough transparent pricing/value comparison content."
+      ],
+      "posting_recommendations": [
+        "Publish 4-6 short-form pieces per week with first-frame product proof.",
+        "Current benchmark engagement-rate from sampled trends: 1.39%.",
+        "Test hooks in first 2 seconds and retain winning variants for paid boosts."
+      ],
+      "generated_at": "2026-02-25T16:22:18.839010"
+    },
+    "campaign_strategy": "Objective: Position Fogg Deodorant as the ultimate accessory for Indian men who want to exude effortless style, confidence, and individuality. | Tone Of Voice: Sophisticated yet approachable, bold and empowering, with a touch of playful modernity. | Key Triggers: {'social_proof': 'Highlight testimonials, influencer endorsements, and user-generated content.', 'identity_and_exclusivity': 'Emphasize Fogg Deodorant as a symbol of personal style and exclusivity.', 'sensory_appeal': 'Focus on the long-lasting fragrance experience and sensory allure.', 'confidence_boost': 'Position Fogg Deodorant as a tool for enhancing confidence in social and fashion-forward scenarios.', 'FOMO': 'Create urgency with limited-time offers and exclusive seasonal collections.'} | Visual Identity: {'color_palette': ['#000000', '#FFD700', '#FF0000', '#00FF00'], 'design_elements': ['gold crest emblem', 'bold Fogg logo', 'matte finish', 'color-coded fragrance indicators'], 'motion_recommendations': ['360-degree rotation of product', 'zoom-in on crest emblem', 'pan top-to-bottom to highlight sleek design']} | Content Formats: ['Short-form video', 'Carousel posts', 'Interactive stories', 'Blog content', 'Email campaigns', 'Influencer collaborations', 'User-generated content']\n\nIdentity context: Product image attached (fog.webp).",
+    "blog_ideas": [
+      "Ultimate guide to choosing the right Fashion solution in 2026",
+      "fogg deodrant  vs alternatives: transparent comparison",
+      "Top mistakes indian men make in Fashion",
+      "Case-study: improving results using fogg deodrant ",
+      "ROI checklist before buying any Fashion product"
+    ],
+    "tweet_ideas": [
+      "Confidence starts here. Fogg Deodorant: your ultimate fashion accessory for every occasion. #FoggStyle #SignatureScent",
+      "Step into sophistication with Fogg Deodorant. Long-lasting freshness, bold style. What’s your favorite scent? #FoggIndia",
+      "Your look isn’t complete without Fogg. Elevate your personal branding with our signature scents. #StyleStaple #FoggDeodorant",
+      "Layer it up! Combine Fogg Deodorant with your outfit for effortless sophistication every day. #FoggFashion #FragranceGame",
+      "Make heads turn. Fogg Deodorant isn’t just a scent—it’s a statement. Discover your signature today. #BoldStyle #FoggConfidence",
+      "Don’t miss out! Exclusive Fogg fragrance collections are here. Upgrade your style game now. #FoggEssentials #FOMO",
+      "Indian men, it’s time to stand out. Fogg Deodorant: the essential accessory for modern masculinity. #TrendForward #FoggIndia",
+      "Why settle for less? Fogg Deodorant lasts longer, smells better, and boosts confidence. The choice is clear. #FoggStyle"
+    ],
+    "reel_ideas": [
+      "POV: You discovered fogg deodrant  and everything changed",
+      "3-second hook showing fogg deodrant  in action",
+      "Before/After transformation reel using fogg deodrant  for indian men",
+      "Top 3 reasons indian men are switching to fogg deodrant ",
+      "Unboxing + first impression of fogg deodrant "
+    ],
+    "short_video_ideas": [],
+    "poster_ideas": [
+      "Bold hero poster featuring fogg deodrant  with a single powerful tagline",
+      "Comparison poster: old way vs fogg deodrant  way",
+      "Lifestyle poster showing indian men using fogg deodrant ",
+      "Minimalist social proof poster for fogg deodrant  with key stat",
+      "Limited-time offer poster for fogg deodrant "
+    ]
+  },
+  "poster_assets": [],
+  "video_asset": null,
+  "generated_at": "2026-02-25T16:22:49.992211Z"
+}

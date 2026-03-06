@@ -1,0 +1,544 @@
+{
+  "identity_vault": {
+    "project_id": "d51c1c2e-0666-4657-b3d4-1fc566b1778e",
+    "status": "skipped",
+    "reason": "No product image provided"
+  },
+  "market_intel": {
+    "trend_analysis": {
+      "category": "Fashion",
+      "platform": "youtube",
+      "region_code": "IN",
+      "data_source": "youtube_data_api",
+      "top_posts": [
+        {
+          "platform": "youtube",
+          "post_id": "j2PwnrH16xI",
+          "title": "Do You Know What These Clothes are Called? 👕🧦❓#learning #kidsvideo",
+          "url": "https://www.youtube.com/watch?v=j2PwnrH16xI",
+          "author": "MEOWJI",
+          "published_at": "2025-04-06T13:01:06Z",
+          "views": 530016789,
+          "likes": 2568672,
+          "comments": 0,
+          "engagement_rate": 0.004846397422327692
+        },
+        {
+          "platform": "youtube",
+          "post_id": "vgr2y70Vlk0",
+          "title": "Guru Randhawa: FASHION Video Song | Latest Punjabi Song 2016 | T-Series",
+          "url": "https://www.youtube.com/watch?v=vgr2y70Vlk0",
+          "author": "T-Series",
+          "published_at": "2016-09-20T07:41:17Z",
+          "views": 253072717,
+          "likes": 1219211,
+          "comments": 39542,
+          "engagement_rate": 0.00497387871328698
+        },
+        {
+          "platform": "youtube",
+          "post_id": "GuZiqstWfPI",
+          "title": "How to Start a Fashion Trend 😘",
+          "url": "https://www.youtube.com/watch?v=GuZiqstWfPI",
+          "author": "Alan's Universe",
+          "published_at": "2025-03-08T13:00:28Z",
+          "views": 167482585,
+          "likes": 4688107,
+          "comments": 15177,
+          "engagement_rate": 0.028082227176037436
+        },
+        {
+          "platform": "youtube",
+          "post_id": "z6QEfM8oFa0",
+          "title": "Best fashion show new dress and change dress fashion on tik tok 2025 #short #shortvideo short 1023",
+          "url": "https://www.youtube.com/watch?v=z6QEfM8oFa0",
+          "author": "Fix Fashion ",
+          "published_at": "2025-04-27T01:08:04Z",
+          "views": 145351728,
+          "likes": 893695,
+          "comments": 783,
+          "engagement_rate": 0.0061538862475718215
+        },
+        {
+          "platform": "youtube",
+          "post_id": "ZXRwaiAJ6NA",
+          "title": "Build your modeling career with Athul's academy #modeling #model #fashion #runway #catwalk #style",
+          "url": "https://www.youtube.com/watch?v=ZXRwaiAJ6NA",
+          "author": "Athul’s Academy",
+          "published_at": "2023-09-22T07:47:46Z",
+          "views": 113849568,
+          "likes": 2138925,
+          "comments": 2396,
+          "engagement_rate": 0.018808336628910176
+        },
+        {
+          "platform": "youtube",
+          "post_id": "kvGl0WuGNgo",
+          "title": "Love ❤️Dress from-Rathaj Fashion #reels",
+          "url": "https://www.youtube.com/watch?v=kvGl0WuGNgo",
+          "author": "Waziha's vlog",
+          "published_at": "2024-02-20T15:32:28Z",
+          "views": 104407506,
+          "likes": 2271919,
+          "comments": 8259,
+          "engagement_rate": 0.0218392152763423
+        },
+        {
+          "platform": "youtube",
+          "post_id": "yycVNcishrE",
+          "title": "Britney Manson - FΛSHION (Single, 2023)",
+          "url": "https://www.youtube.com/watch?v=yycVNcishrE",
+          "author": "Britney Manson",
+          "published_at": "2023-08-10T22:00:07Z",
+          "views": 86587181,
+          "likes": 795037,
+          "comments": 11783,
+          "engagement_rate": 0.009318007477342403
+        },
+        {
+          "platform": "youtube",
+          "post_id": "c4fi50UeAPI",
+          "title": "Part - 1 Getting Ready For Our Sister’s Reception Function #shorts #fashion",
+          "url": "https://www.youtube.com/watch?v=c4fi50UeAPI",
+          "author": "Real Aman",
+          "published_at": "2023-03-11T08:56:00Z",
+          "views": 75189456,
+          "likes": 2035509,
+          "comments": 0,
+          "engagement_rate": 0.027071734632579333
+        },
+        {
+          "platform": "youtube",
+          "post_id": "6DgrL7Gt_kQ",
+          "title": "How is this a dress? 🤯 #dress #fashion #onlinevsreality #swealife",
+          "url": "https://www.youtube.com/watch?v=6DgrL7Gt_kQ",
+          "author": "Swealife",
+          "published_at": "2023-12-18T15:00:04Z",
+          "views": 70841864,
+          "likes": 1879457,
+          "comments": 0,
+          "engagement_rate": 0.026530315464313586
+        },
+        {
+          "platform": "youtube",
+          "post_id": "YhUAM0oNWB0",
+          "title": "Mar Jawaan Lyrical | Fashion | Priyanka Chopra, Kangna Ranawat | Shruti Pathak, Salim Merchant",
+          "url": "https://www.youtube.com/watch?v=YhUAM0oNWB0",
+          "author": "T-Series",
+          "published_at": "2020-05-27T08:54:08Z",
+          "views": 63498661,
+          "likes": 248006,
+          "comments": 6129,
+          "engagement_rate": 0.004002210377318035
+        }
+      ],
+      "top_keywords": [
+        "fashion",
+        "dress",
+        "song",
+        "modeling",
+        "short",
+        "guru",
+        "randhawa",
+        "latest",
+        "punjabi",
+        "series",
+        "know",
+        "these"
+      ],
+      "recommended_hooks": [
+        "Stop wasting money on Fashion: do this fashion framework instead.",
+        "I tried 3 Fashion tactics in 7 days — only this dress method worked.",
+        "Before you buy any Fashion solution, check this 10-second test."
+      ],
+      "content_gaps": [
+        "Few creators explain beginner mistakes around fashion, dress, song.",
+        "Lack of side-by-side competitor breakdowns in Fashion.",
+        "Not enough transparent pricing/value comparison content."
+      ],
+      "posting_recommendations": [
+        "Publish 4-6 short-form pieces per week with first-frame product proof.",
+        "Current benchmark engagement-rate from sampled trends: 1.52%.",
+        "Test hooks in first 2 seconds and retain winning variants for paid boosts."
+      ],
+      "generated_at": "2026-02-24T17:16:46.031663"
+    },
+    "competitor_handles": [
+      "Fashion trends",
+      "Fashion india"
+    ],
+    "competitor_analysis": [
+      {
+        "competitor": "Fashion trends",
+        "top_questions": [
+          "What hooks in Fashion trends are currently outperforming?"
+        ],
+        "complaints": [
+          "Few creators explain beginner mistakes around fashion, trend, fashiontrends.",
+          "Lack of side-by-side competitor breakdowns in Fashion trends.",
+          "Not enough transparent pricing/value comparison content."
+        ],
+        "viral_hooks": [
+          "Stop wasting money on Fashion trends: do this fashion framework instead.",
+          "I tried 3 Fashion trends tactics in 7 days — only this trend method worked.",
+          "Before you buy any Fashion trends solution, check this 10-second test."
+        ],
+        "opportunity_gap": "API-first trend scan (youtube_data_api). Top keywords: fashion, trend, fashiontrends, jeans, molina, start"
+      },
+      {
+        "competitor": "Fashion india",
+        "top_questions": [
+          "What hooks in Fashion india are currently outperforming?"
+        ],
+        "complaints": [
+          "Few creators explain beginner mistakes around fashion, india, dress.",
+          "Lack of side-by-side competitor breakdowns in Fashion india.",
+          "Not enough transparent pricing/value comparison content."
+        ],
+        "viral_hooks": [
+          "Stop wasting money on Fashion india: do this fashion framework instead.",
+          "I tried 3 Fashion india tactics in 7 days — only this india method worked.",
+          "Before you buy any Fashion india solution, check this 10-second test."
+        ],
+        "opportunity_gap": "API-first trend scan (youtube_data_api). Top keywords: fashion, india, dress, indian, modeling, wedding"
+      }
+    ]
+  },
+  "gap_analysis": {
+    "top_unanswered_questions": [
+      "What hooks in Fashion trends are currently outperforming?",
+      "What hooks in Fashion india are currently outperforming?"
+    ],
+    "top_complaints": [
+      "Few creators explain beginner mistakes around fashion, trend, fashiontrends.",
+      "Lack of side-by-side competitor breakdowns in Fashion trends.",
+      "Few creators explain beginner mistakes around fashion, india, dress.",
+      "Lack of side-by-side competitor breakdowns in Fashion india."
+    ],
+    "winning_hooks_from_market": [
+      "Stop wasting money on Fashion trends: do this fashion framework instead.",
+      "I tried 3 Fashion trends tactics in 7 days — only this trend method worked.",
+      "Stop wasting money on Fashion india: do this fashion framework instead.",
+      "I tried 3 Fashion india tactics in 7 days — only this india method worked."
+    ],
+    "market_gaps": [
+      "Few creators explain beginner mistakes around fashion, dress, song.",
+      "Lack of side-by-side competitor breakdowns in Fashion.",
+      "Not enough transparent pricing/value comparison content."
+    ],
+    "recommended_positioning": "Position fog perfume as the fastest path to outcomes for indian teen age kids and men below 40 in Fashion.\n\nIdentity context: Product image attached (fog.webp)."
+  },
+  "competitor_matrix": [
+    {
+      "source": "competitor",
+      "title": "Do You Know What These Clothes are Called? 👕🧦❓#learning #kidsvideo",
+      "author": "MEOWJI",
+      "views": 530016789,
+      "engagement_rate": 0.0048,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Guru Randhawa: FASHION Video Song | Latest Punjabi Song 2016 | T-Series",
+      "author": "T-Series",
+      "views": 253072717,
+      "engagement_rate": 0.005,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "How to Start a Fashion Trend 😘",
+      "author": "Alan's Universe",
+      "views": 167482585,
+      "engagement_rate": 0.0281,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Best fashion show new dress and change dress fashion on tik tok 2025 #short #shortvideo short 1023",
+      "author": "Fix Fashion ",
+      "views": 145351728,
+      "engagement_rate": 0.0062,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Build your modeling career with Athul's academy #modeling #model #fashion #runway #catwalk #style",
+      "author": "Athul’s Academy",
+      "views": 113849568,
+      "engagement_rate": 0.0188,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Love ❤️Dress from-Rathaj Fashion #reels",
+      "author": "Waziha's vlog",
+      "views": 104407506,
+      "engagement_rate": 0.0218,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Britney Manson - FΛSHION (Single, 2023)",
+      "author": "Britney Manson",
+      "views": 86587181,
+      "engagement_rate": 0.0093,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Part - 1 Getting Ready For Our Sister’s Reception Function #shorts #fashion",
+      "author": "Real Aman",
+      "views": 75189456,
+      "engagement_rate": 0.0271,
+      "score": 100.0
+    },
+    {
+      "source": "our_campaign",
+      "title": "fog perfume",
+      "author": "Catalyst Nexus AI",
+      "views": null,
+      "engagement_rate": null,
+      "score": 99.0,
+      "benchmark": 95.0,
+      "uplift_percent": 4.21
+    }
+  ],
+  "scoring": {
+    "ai_score": 99.0,
+    "competitor_score": 95.0,
+    "uplift_percent": 4.21,
+    "verdict": "Ranked above competitor benchmark",
+    "factors": [
+      "Gap coverage: 25.0%",
+      "Hook strength signal: 0.43",
+      "CTA density signal: 0.36",
+      "Urgency signal: 0.34",
+      "Idea volume bonus: 7.5"
+    ],
+    "feature_vector": {
+      "hook_strength": 0.4294,
+      "cta_density": 0.3631,
+      "sentiment_score": 0.7567,
+      "question_density": 0.0145,
+      "urgency_score": 0.3393,
+      "phrase_diversity": 0.4104,
+      "avg_segment_length": 0.6104,
+      "keyword_density": 0.3478
+    }
+  },
+  "campaign": {
+    "category_trend_analysis": {
+      "category": "Fashion",
+      "platform": "youtube",
+      "region_code": "IN",
+      "data_source": "youtube_data_api",
+      "top_posts": [
+        {
+          "platform": "youtube",
+          "post_id": "j2PwnrH16xI",
+          "title": "Do You Know What These Clothes are Called? 👕🧦❓#learning #kidsvideo",
+          "url": "https://www.youtube.com/watch?v=j2PwnrH16xI",
+          "author": "MEOWJI",
+          "published_at": "2025-04-06T13:01:06Z",
+          "views": 530016789,
+          "likes": 2568672,
+          "comments": 0,
+          "engagement_rate": 0.004846397422327692
+        },
+        {
+          "platform": "youtube",
+          "post_id": "vgr2y70Vlk0",
+          "title": "Guru Randhawa: FASHION Video Song | Latest Punjabi Song 2016 | T-Series",
+          "url": "https://www.youtube.com/watch?v=vgr2y70Vlk0",
+          "author": "T-Series",
+          "published_at": "2016-09-20T07:41:17Z",
+          "views": 253072717,
+          "likes": 1219211,
+          "comments": 39542,
+          "engagement_rate": 0.00497387871328698
+        },
+        {
+          "platform": "youtube",
+          "post_id": "GuZiqstWfPI",
+          "title": "How to Start a Fashion Trend 😘",
+          "url": "https://www.youtube.com/watch?v=GuZiqstWfPI",
+          "author": "Alan's Universe",
+          "published_at": "2025-03-08T13:00:28Z",
+          "views": 167482585,
+          "likes": 4688107,
+          "comments": 15177,
+          "engagement_rate": 0.028082227176037436
+        },
+        {
+          "platform": "youtube",
+          "post_id": "z6QEfM8oFa0",
+          "title": "Best fashion show new dress and change dress fashion on tik tok 2025 #short #shortvideo short 1023",
+          "url": "https://www.youtube.com/watch?v=z6QEfM8oFa0",
+          "author": "Fix Fashion ",
+          "published_at": "2025-04-27T01:08:04Z",
+          "views": 145351728,
+          "likes": 893695,
+          "comments": 783,
+          "engagement_rate": 0.0061538862475718215
+        },
+        {
+          "platform": "youtube",
+          "post_id": "ZXRwaiAJ6NA",
+          "title": "Build your modeling career with Athul's academy #modeling #model #fashion #runway #catwalk #style",
+          "url": "https://www.youtube.com/watch?v=ZXRwaiAJ6NA",
+          "author": "Athul’s Academy",
+          "published_at": "2023-09-22T07:47:46Z",
+          "views": 113849568,
+          "likes": 2138925,
+          "comments": 2396,
+          "engagement_rate": 0.018808336628910176
+        },
+        {
+          "platform": "youtube",
+          "post_id": "kvGl0WuGNgo",
+          "title": "Love ❤️Dress from-Rathaj Fashion #reels",
+          "url": "https://www.youtube.com/watch?v=kvGl0WuGNgo",
+          "author": "Waziha's vlog",
+          "published_at": "2024-02-20T15:32:28Z",
+          "views": 104407506,
+          "likes": 2271919,
+          "comments": 8259,
+          "engagement_rate": 0.0218392152763423
+        },
+        {
+          "platform": "youtube",
+          "post_id": "yycVNcishrE",
+          "title": "Britney Manson - FΛSHION (Single, 2023)",
+          "url": "https://www.youtube.com/watch?v=yycVNcishrE",
+          "author": "Britney Manson",
+          "published_at": "2023-08-10T22:00:07Z",
+          "views": 86587181,
+          "likes": 795037,
+          "comments": 11783,
+          "engagement_rate": 0.009318007477342403
+        },
+        {
+          "platform": "youtube",
+          "post_id": "c4fi50UeAPI",
+          "title": "Part - 1 Getting Ready For Our Sister’s Reception Function #shorts #fashion",
+          "url": "https://www.youtube.com/watch?v=c4fi50UeAPI",
+          "author": "Real Aman",
+          "published_at": "2023-03-11T08:56:00Z",
+          "views": 75189456,
+          "likes": 2035509,
+          "comments": 0,
+          "engagement_rate": 0.027071734632579333
+        },
+        {
+          "platform": "youtube",
+          "post_id": "6DgrL7Gt_kQ",
+          "title": "How is this a dress? 🤯 #dress #fashion #onlinevsreality #swealife",
+          "url": "https://www.youtube.com/watch?v=6DgrL7Gt_kQ",
+          "author": "Swealife",
+          "published_at": "2023-12-18T15:00:04Z",
+          "views": 70841864,
+          "likes": 1879457,
+          "comments": 0,
+          "engagement_rate": 0.026530315464313586
+        },
+        {
+          "platform": "youtube",
+          "post_id": "YhUAM0oNWB0",
+          "title": "Mar Jawaan Lyrical | Fashion | Priyanka Chopra, Kangna Ranawat | Shruti Pathak, Salim Merchant",
+          "url": "https://www.youtube.com/watch?v=YhUAM0oNWB0",
+          "author": "T-Series",
+          "published_at": "2020-05-27T08:54:08Z",
+          "views": 63498661,
+          "likes": 248006,
+          "comments": 6129,
+          "engagement_rate": 0.004002210377318035
+        }
+      ],
+      "top_keywords": [
+        "fashion",
+        "dress",
+        "song",
+        "modeling",
+        "short",
+        "guru",
+        "randhawa",
+        "latest",
+        "punjabi",
+        "series",
+        "know",
+        "these"
+      ],
+      "recommended_hooks": [
+        "Stop wasting money on Fashion: do this fashion framework instead.",
+        "I tried 3 Fashion tactics in 7 days — only this dress method worked.",
+        "Before you buy any Fashion solution, check this 10-second test."
+      ],
+      "content_gaps": [
+        "Few creators explain beginner mistakes around fashion, dress, song.",
+        "Lack of side-by-side competitor breakdowns in Fashion.",
+        "Not enough transparent pricing/value comparison content."
+      ],
+      "posting_recommendations": [
+        "Publish 4-6 short-form pieces per week with first-frame product proof.",
+        "Current benchmark engagement-rate from sampled trends: 1.52%.",
+        "Test hooks in first 2 seconds and retain winning variants for paid boosts."
+      ],
+      "generated_at": "2026-02-24T17:16:46.031663"
+    },
+    "campaign_strategy": "Position fog perfume as the fastest path to outcomes for indian teen age kids and men below 40 in Fashion.\n\nIdentity context: Product image attached (fog.webp).",
+    "blog_ideas": [
+      "Ultimate guide to choosing the right Fashion solution in 2026",
+      "fog perfume vs alternatives: transparent comparison",
+      "Top mistakes indian teen age kids and men below 40 make in Fashion",
+      "Case-study: improving results using fog perfume",
+      "ROI checklist before buying any Fashion product"
+    ],
+    "tweet_ideas": [
+      "Most Fashion advice is outdated. Here is what works now 👇",
+      "3 lessons we learned building fog perfume for indian teen age kids and men below 40",
+      "Before buying a Fashion product, ask these 5 questions.",
+      "The hidden cost nobody talks about in Fashion",
+      "Quick win: improve your outcomes with this 15-min framework.",
+      "Myth vs Reality in Fashion (thread)",
+      "If you only do one thing this week, do this.",
+      "Bookmark this: Fashion decision checklist."
+    ],
+    "reel_ideas": [
+      "POV: You finally solved Fashion using one simple workflow",
+      "3-second hook + demo format for fog perfume",
+      "Before/After transformation reel for indian teen age kids and men below 40",
+      "Common mistake breakdown and fix in Fashion",
+      "Rapid FAQ reel answering top user objections"
+    ],
+    "short_video_ideas": [
+      "YouTube Short: 5 myths about Fashion",
+      "YouTube Short: Quick setup tutorial for fog perfume",
+      "YouTube Short: Cost vs value in 30 seconds",
+      "YouTube Short: Beginner checklist for indian teen age kids and men below 40",
+      "YouTube Short: One framework to get faster results"
+    ],
+    "poster_ideas": [
+      "Bold promise poster: better Fashion outcomes in fewer steps",
+      "Comparison poster: old way vs fog perfume way",
+      "Problem/Solution poster with one CTA",
+      "Minimalist social proof poster with key metric",
+      "Offer poster tailored for indian teen age kids and men below 40"
+    ]
+  },
+  "poster_assets": [
+    {
+      "name": "dalle_38c02804086c4a7693ee62059b7284f6.png",
+      "asset_type": "poster",
+      "path": "renders/dalle_38c02804086c4a7693ee62059b7284f6.png",
+      "download_url": "/api/v1/market-intel/download?path=renders/dalle_38c02804086c4a7693ee62059b7284f6.png"
+    }
+  ],
+  "video_asset": {
+    "name": "fog-perfume_video_blueprint_20260224_172035.md",
+    "asset_type": "video_blueprint",
+    "path": "backend/output/demo_assets/fog-perfume_video_blueprint_20260224_172035.md",
+    "download_url": "/api/v1/market-intel/download?path=backend/output/demo_assets/fog-perfume_video_blueprint_20260224_172035.md"
+  },
+  "generated_at": "2026-02-24T17:20:35.602598Z"
+}

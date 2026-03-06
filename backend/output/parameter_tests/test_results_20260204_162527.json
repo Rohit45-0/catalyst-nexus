@@ -1,0 +1,63 @@
+{
+  "timestamp": "2026-02-04T16:25:27.721610",
+  "results": [
+    {
+      "test_name": "End Frame Lock (image_end_url)",
+      "status": "ERROR",
+      "error": "'str' object has no attribute 'get'",
+      "params_tested": {
+        "image_end_url": "https://rohitf.blob.core.windows.net/product-images/27c44136_896332-2560x1440-desktop-hd-laptop-background-image.jpg"
+      }
+    },
+    {
+      "test_name": "Negative Prompt",
+      "status": "ERROR",
+      "error": "'str' object has no attribute 'get'",
+      "params_tested": {
+        "negative_prompt": "blurry, distorted, morphing, low quality, changing shape"
+      }
+    },
+    {
+      "test_name": "End Frame + Negative Prompt",
+      "status": "ERROR",
+      "error": "'str' object has no attribute 'get'",
+      "params_tested": {
+        "image_end_url": "https://rohitf.blob.core.windows.net/product-images/27c44136_896332-2560x1440-desktop-hd-laptop-background-image.jpg",
+        "negative_prompt": "blurry, distorted, morphing, low quality"
+      }
+    },
+    {
+      "test_name": "CFG Scale 7.5",
+      "status": "ERROR",
+      "error": "'str' object has no attribute 'get'",
+      "params_tested": {
+        "cfg_scale": 7.5
+      }
+    },
+    {
+      "test_name": "Mode Professional",
+      "status": "ERROR",
+      "error": "'str' object has no attribute 'get'",
+      "params_tested": {
+        "mode": "professional"
+      }
+    },
+    {
+      "test_name": "Mode Quality",
+      "status": "ERROR",
+      "error": "'str' object has no attribute 'get'",
+      "params_tested": {
+        "mode": "quality"
+      }
+    }
+  ],
+  "working_params": [],
+  "failed_params": [
+    "End Frame Lock (image_end_url)",
+    "Negative Prompt",
+    "End Frame + Negative Prompt",
+    "CFG Scale 7.5",
+    "Mode Professional",
+    "Mode Quality"
+  ]
+}

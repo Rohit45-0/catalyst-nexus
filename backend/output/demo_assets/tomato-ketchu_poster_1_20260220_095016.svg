@@ -1,0 +1,15 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1080' height='1350' viewBox='0 0 1080 1350'>
+  <defs>
+    <linearGradient id='bg' x1='0%' y1='0%' x2='100%' y2='100%'>
+      <stop offset='0%' stop-color='#0e1a3d' />
+      <stop offset='100%' stop-color='#1d5fff' />
+    </linearGradient>
+  </defs>
+  <rect width='1080' height='1350' fill='url(#bg)'/>
+  <text x='70' y='140' fill='#9be7ff' font-size='40' font-family='Arial, sans-serif'>Catalyst Nexus AI Poster</text>
+  <text x='70' y='230' fill='#ffffff' font-size='62' font-weight='bold' font-family='Arial, sans-serif'>tomato ketchu[</text>
+  <text x='70' y='320' fill='#d6e4ff' font-size='42' font-family='Arial, sans-serif'>Concept #1</text>
+  <text x='70' y='430' fill='#ffffff' font-size='34' font-family='Arial, sans-serif'><tspan x='70' dy='40'>Bright red poster featuring a happy</tspan><tspan x='70' dy='40'>kid holding a snack with ketchup,</tspan><tspan x='70' dy='40'>text: &#x27;Healthy, Tasty, Affordable! ₹10</tspan><tspan x='70' dy='40'>Tomato Ketchup for Every Snack!&#x27;</tspan></text>
+  <rect x='70' y='1120' width='940' height='110' rx='20' fill='rgba(255,255,255,0.15)'/>
+  <text x='100' y='1190' fill='#ffffff' font-size='34' font-family='Arial, sans-serif'>Download • Publish • Track • Learn</text>
+</svg>

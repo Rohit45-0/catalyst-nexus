@@ -1,0 +1,594 @@
+{
+  "identity_vault": {
+    "project_id": "0bce314d-7bb1-4178-9933-4b1cf0ba659d",
+    "status": "stored",
+    "confidence": 0.98,
+    "visual_dna": {
+      "product_category": "body spray",
+      "product_description": "The Fogg body spray is a sleek and stylish fragrance product designed for personal use. It features a cylindrical metal canister with a matte black finish, adorned with bold gold branding and accents. The product is available in multiple variants, each distinguished by subtle color-coded elements on the label, such as red and green dots. The spray nozzle is concealed under a matching black cap, providing a seamless and modern appearance.",
+      "materials": {
+        "primary_material": "metal",
+        "secondary_materials": [
+          "plastic"
+        ],
+        "surface_finish": "matte",
+        "transparency": "opaque",
+        "reflectivity": 0.2,
+        "texture_description": "smooth and uniform surface with a matte coating",
+        "color_palette": [
+          "#000000",
+          "#FFD700",
+          "#FF0000",
+          "#008000"
+        ]
+      },
+      "lighting": {
+        "primary_light_direction": "front",
+        "light_type": "studio",
+        "light_intensity": "medium",
+        "shadow_characteristics": "soft shadows around the base and sides",
+        "highlights": [
+          "on the curved edges of the canister"
+        ],
+        "color_temperature": "neutral"
+      },
+      "structure": {
+        "overall_shape": "cylindrical",
+        "dimensions_ratio": "tall/narrow",
+        "key_components": [
+          "metal canister",
+          "plastic cap",
+          "spray nozzle"
+        ],
+        "symmetry": "symmetric",
+        "distinctive_features": [
+          "gold branding",
+          "color-coded dots",
+          "matte black finish"
+        ],
+        "brand_elements": [
+          "FOGG logo",
+          "variant names",
+          "crest emblem"
+        ]
+      },
+      "motion_recommendations": [
+        "slow 360-degree rotation to showcase the branding",
+        "zoom in on the logo and variant name for emphasis",
+        "tilt to reveal the spray nozzle under the cap"
+      ],
+      "camera_angle_suggestions": [
+        "front-facing angle to highlight branding",
+        "45-degree angle to capture the cylindrical shape",
+        "top-down angle to showcase the cap and nozzle"
+      ],
+      "confidence_score": 0.98
+    }
+  },
+  "market_intel": {
+    "trend_analysis": {
+      "category": "perfume",
+      "platform": "youtube",
+      "region_code": "IN",
+      "data_source": "youtube_data_api",
+      "top_posts": [
+        {
+          "platform": "youtube",
+          "post_id": "X5dg86tXQjU",
+          "title": "Golden guy gifted me gold 😨 #trending #shorts #catchysmells #itmaaz #perfumer  #youtuber #perfume",
+          "url": "https://www.youtube.com/watch?v=X5dg86tXQjU",
+          "author": "IT Maaz",
+          "published_at": "2025-04-01T10:19:33Z",
+          "views": 542176796,
+          "likes": 6982305,
+          "comments": 8870,
+          "engagement_rate": 0.01289464073634018
+        },
+        {
+          "platform": "youtube",
+          "post_id": "JEV210XLDoY",
+          "title": "Challenge Accepted 😎😮‍💨🫠 #trending #shorts #catchysmells #itmaaz #perfumer #youtuber",
+          "url": "https://www.youtube.com/watch?v=JEV210XLDoY",
+          "author": "IT Maaz",
+          "published_at": "2025-03-06T13:12:22Z",
+          "views": 314233647,
+          "likes": 5065927,
+          "comments": 6159,
+          "engagement_rate": 0.016141129533464634
+        },
+        {
+          "platform": "youtube",
+          "post_id": "40mKQrujwsQ",
+          "title": "I thought the Rose🌹is for me 😆🥲 #trending #shorts #catchysmells #itmaaz #fragrance #flower #korea",
+          "url": "https://www.youtube.com/watch?v=40mKQrujwsQ",
+          "author": "IT Maaz",
+          "published_at": "2024-03-29T13:16:42Z",
+          "views": 232685714,
+          "likes": 7786045,
+          "comments": 14736,
+          "engagement_rate": 0.033524967501872505
+        },
+        {
+          "platform": "youtube",
+          "post_id": "bi0MgbpCVuk",
+          "title": "Strawberry reigns supreme in the top notes 🍓 #shorts #trending #fragrance  #catchysmells #itmaaz",
+          "url": "https://www.youtube.com/watch?v=bi0MgbpCVuk",
+          "author": "IT Maaz",
+          "published_at": "2024-03-11T14:43:04Z",
+          "views": 183677356,
+          "likes": 6731219,
+          "comments": 14095,
+          "engagement_rate": 0.03672371024330293
+        },
+        {
+          "platform": "youtube",
+          "post_id": "mNeVoEKwuwk",
+          "title": "Banda MS de Sergio Lizárraga - Tu Perfume (Video Oficial)",
+          "url": "https://www.youtube.com/watch?v=mNeVoEKwuwk",
+          "author": "BANDA MS",
+          "published_at": "2024-02-22T23:00:10Z",
+          "views": 155726267,
+          "likes": 313936,
+          "comments": 3671,
+          "engagement_rate": 0.002039521052668655
+        },
+        {
+          "platform": "youtube",
+          "post_id": "xlJ69RJpYn4",
+          "title": "Belo - Perfume (Ao Vivo)",
+          "url": "https://www.youtube.com/watch?v=xlJ69RJpYn4",
+          "author": "BeloVEVO",
+          "published_at": "2012-08-12T17:37:35Z",
+          "views": 146650325,
+          "likes": 685786,
+          "comments": 18223,
+          "engagement_rate": 0.004800596248252433
+        },
+        {
+          "platform": "youtube",
+          "post_id": "aC4M4SxJexg",
+          "title": "Derramo el Perfume - Montesanto ft Averly Morillo (Video Oficial)",
+          "url": "https://www.youtube.com/watch?v=aC4M4SxJexg",
+          "author": "Montesanto Oficial",
+          "published_at": "2021-05-15T01:00:15Z",
+          "views": 97262776,
+          "likes": 421667,
+          "comments": 8714,
+          "engagement_rate": 0.0044249302528646724
+        },
+        {
+          "platform": "youtube",
+          "post_id": "6xJLjFQXsZU",
+          "title": "Perfume A Tus Pies  - Jaz Jacob & En Espíritu y En Verdad (En Vivo)",
+          "url": "https://www.youtube.com/watch?v=6xJLjFQXsZU",
+          "author": "CEV Musik",
+          "published_at": "2022-04-10T02:21:19Z",
+          "views": 93181087,
+          "likes": 217527,
+          "comments": 5601,
+          "engagement_rate": 0.002394563179972348
+        },
+        {
+          "platform": "youtube",
+          "post_id": "wJPicWv_SGU",
+          "title": "DE FÉRIAS COM PRESENÇA | Perfume - Reinventar - Supera | Ao Vivo - Samba e Pagode",
+          "url": "https://www.youtube.com/watch?v=wJPicWv_SGU",
+          "author": "Grupo Presença Oficial",
+          "published_at": "2023-12-28T15:00:12Z",
+          "views": 89973804,
+          "likes": 102375,
+          "comments": 559,
+          "engagement_rate": 0.0011440441042150447
+        },
+        {
+          "platform": "youtube",
+          "post_id": "q6T0wOMsNrI",
+          "title": "[Official Music Video] Perfume 「FLASH」",
+          "url": "https://www.youtube.com/watch?v=q6T0wOMsNrI",
+          "author": "Perfume",
+          "published_at": "2016-04-12T15:00:04Z",
+          "views": 84487336,
+          "likes": 342776,
+          "comments": 13350,
+          "engagement_rate": 0.0042151405981128345
+        }
+      ],
+      "top_keywords": [
+        "perfume",
+        "trending",
+        "catchysmells",
+        "itmaaz",
+        "vivo",
+        "perfumer",
+        "youtuber",
+        "fragrance",
+        "oficial",
+        "golden",
+        "guy",
+        "gifted"
+      ],
+      "recommended_hooks": [
+        "Stop wasting money on perfume: do this perfume framework instead.",
+        "I tried 3 perfume tactics in 7 days — only this trending method worked.",
+        "Before you buy any perfume solution, check this 10-second test."
+      ],
+      "content_gaps": [
+        "Few creators explain beginner mistakes around perfume, trending, catchysmells.",
+        "Lack of side-by-side competitor breakdowns in perfume.",
+        "Not enough transparent pricing/value comparison content."
+      ],
+      "posting_recommendations": [
+        "Publish 4-6 short-form pieces per week with first-frame product proof.",
+        "Current benchmark engagement-rate from sampled trends: 1.18%.",
+        "Test hooks in first 2 seconds and retain winning variants for paid boosts."
+      ],
+      "generated_at": "2026-02-24T18:52:14.807808"
+    },
+    "competitor_handles": [
+      "perfume trends",
+      "perfume india"
+    ],
+    "competitor_analysis": [
+      {
+        "competitor": "perfume trends",
+        "top_questions": [
+          "What hooks in perfume trends are currently outperforming?"
+        ],
+        "complaints": [
+          "Few creators explain beginner mistakes around perfume, fragrance, trend.",
+          "Lack of side-by-side competitor breakdowns in perfume trends.",
+          "Not enough transparent pricing/value comparison content."
+        ],
+        "viral_hooks": [
+          "Stop wasting money on perfume trends: do this perfume framework instead.",
+          "I tried 3 perfume trends tactics in 7 days — only this fragrance method worked.",
+          "Before you buy any perfume trends solution, check this 10-second test."
+        ],
+        "opportunity_gap": "API-first trend scan (youtube_data_api). Top keywords: perfume, fragrance, trend, trends, perfumes, snowfall"
+      },
+      {
+        "competitor": "perfume india",
+        "top_questions": [
+          "What hooks in perfume india are currently outperforming?"
+        ],
+        "complaints": [
+          "Few creators explain beginner mistakes around perfume, india, indian.",
+          "Lack of side-by-side competitor breakdowns in perfume india.",
+          "Not enough transparent pricing/value comparison content."
+        ],
+        "viral_hooks": [
+          "Stop wasting money on perfume india: do this perfume framework instead.",
+          "I tried 3 perfume india tactics in 7 days — only this india method worked.",
+          "Before you buy any perfume india solution, check this 10-second test."
+        ],
+        "opportunity_gap": "API-first trend scan (youtube_data_api). Top keywords: perfume, india, indian, perfumes, home, products"
+      }
+    ]
+  },
+  "gap_analysis": {
+    "top_unanswered_questions": [
+      "What hooks in perfume trends are currently outperforming?",
+      "What hooks in perfume india are currently outperforming?"
+    ],
+    "top_complaints": [
+      "Few creators explain beginner mistakes around perfume, fragrance, trend.",
+      "Lack of side-by-side competitor breakdowns in perfume trends.",
+      "Few creators explain beginner mistakes around perfume, india, indian.",
+      "Lack of side-by-side competitor breakdowns in perfume india."
+    ],
+    "winning_hooks_from_market": [
+      "Stop wasting money on perfume trends: do this perfume framework instead.",
+      "I tried 3 perfume trends tactics in 7 days — only this fragrance method worked.",
+      "Stop wasting money on perfume india: do this perfume framework instead.",
+      "I tried 3 perfume india tactics in 7 days — only this india method worked."
+    ],
+    "market_gaps": [
+      "Few creators explain beginner mistakes around perfume, trending, catchysmells.",
+      "Lack of side-by-side competitor breakdowns in perfume.",
+      "Not enough transparent pricing/value comparison content."
+    ],
+    "recommended_positioning": "Tagline: Fogg Body Spray: Long-Lasting Confidence, Always Within Reach | Core Message: Fogg Body Spray is the everyday luxury every budget-conscious individual deserves. With its long-lasting fragrance and premium feel, it’s your secret weapon to staying confident, alluring, and unforgettable. | Key Triggers: {'sensory_appeal': 'Highlight the invigorating and captivating fragrance notes that linger all day.', 'identity_and_self_expression': 'Position Fogg as the perfect finishing touch to express individuality and style.', 'social_proof': 'Use testimonials and influencer endorsements to showcase its popularity and effectiveness.', 'desire_for_attraction': 'Emphasize the magnetic allure and confidence boost that comes with wearing Fogg.', 'exclusivity_and_status': 'Frame Fogg as a premium yet accessible choice for those who demand quality.'} | Execution Channels: ['Instagram', 'YouTube, TikTok', 'Facebook', 'Influencer collaborations', 'Retail activations']\n\nIdentity context: Product image attached (fog.webp)."
+  },
+  "competitor_matrix": [
+    {
+      "source": "competitor",
+      "title": "Golden guy gifted me gold 😨 #trending #shorts #catchysmells #itmaaz #perfumer  #youtuber #perfume",
+      "author": "IT Maaz",
+      "views": 542176796,
+      "engagement_rate": 0.0129,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Challenge Accepted 😎😮‍💨🫠 #trending #shorts #catchysmells #itmaaz #perfumer #youtuber",
+      "author": "IT Maaz",
+      "views": 314233647,
+      "engagement_rate": 0.0161,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "I thought the Rose🌹is for me 😆🥲 #trending #shorts #catchysmells #itmaaz #fragrance #flower #korea",
+      "author": "IT Maaz",
+      "views": 232685714,
+      "engagement_rate": 0.0335,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Strawberry reigns supreme in the top notes 🍓 #shorts #trending #fragrance  #catchysmells #itmaaz",
+      "author": "IT Maaz",
+      "views": 183677356,
+      "engagement_rate": 0.0367,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Banda MS de Sergio Lizárraga - Tu Perfume (Video Oficial)",
+      "author": "BANDA MS",
+      "views": 155726267,
+      "engagement_rate": 0.002,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Belo - Perfume (Ao Vivo)",
+      "author": "BeloVEVO",
+      "views": 146650325,
+      "engagement_rate": 0.0048,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Derramo el Perfume - Montesanto ft Averly Morillo (Video Oficial)",
+      "author": "Montesanto Oficial",
+      "views": 97262776,
+      "engagement_rate": 0.0044,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Perfume A Tus Pies  - Jaz Jacob & En Espíritu y En Verdad (En Vivo)",
+      "author": "CEV Musik",
+      "views": 93181087,
+      "engagement_rate": 0.0024,
+      "score": 100.0
+    },
+    {
+      "source": "our_campaign",
+      "title": "fogg body spray",
+      "author": "Catalyst Nexus AI",
+      "views": null,
+      "engagement_rate": null,
+      "score": 99.0,
+      "benchmark": 95.0,
+      "uplift_percent": 4.21
+    }
+  ],
+  "scoring": {
+    "ai_score": 99.0,
+    "competitor_score": 95.0,
+    "uplift_percent": 4.21,
+    "verdict": "Ranked above competitor benchmark",
+    "factors": [
+      "Gap coverage: 12.5%",
+      "Hook strength signal: 0.36",
+      "CTA density signal: 0.09",
+      "Urgency signal: 0.17",
+      "Idea volume bonus: 5.0"
+    ],
+    "feature_vector": {
+      "hook_strength": 0.3581,
+      "cta_density": 0.0934,
+      "sentiment_score": 0.6475,
+      "question_density": 0.0759,
+      "urgency_score": 0.1718,
+      "phrase_diversity": 0.2409,
+      "avg_segment_length": 0.315,
+      "keyword_density": 0.1805
+    }
+  },
+  "campaign": {
+    "category_trend_analysis": {
+      "category": "perfume",
+      "platform": "youtube",
+      "region_code": "IN",
+      "data_source": "youtube_data_api",
+      "top_posts": [
+        {
+          "platform": "youtube",
+          "post_id": "X5dg86tXQjU",
+          "title": "Golden guy gifted me gold 😨 #trending #shorts #catchysmells #itmaaz #perfumer  #youtuber #perfume",
+          "url": "https://www.youtube.com/watch?v=X5dg86tXQjU",
+          "author": "IT Maaz",
+          "published_at": "2025-04-01T10:19:33Z",
+          "views": 542176796,
+          "likes": 6982305,
+          "comments": 8870,
+          "engagement_rate": 0.01289464073634018
+        },
+        {
+          "platform": "youtube",
+          "post_id": "JEV210XLDoY",
+          "title": "Challenge Accepted 😎😮‍💨🫠 #trending #shorts #catchysmells #itmaaz #perfumer #youtuber",
+          "url": "https://www.youtube.com/watch?v=JEV210XLDoY",
+          "author": "IT Maaz",
+          "published_at": "2025-03-06T13:12:22Z",
+          "views": 314233647,
+          "likes": 5065927,
+          "comments": 6159,
+          "engagement_rate": 0.016141129533464634
+        },
+        {
+          "platform": "youtube",
+          "post_id": "40mKQrujwsQ",
+          "title": "I thought the Rose🌹is for me 😆🥲 #trending #shorts #catchysmells #itmaaz #fragrance #flower #korea",
+          "url": "https://www.youtube.com/watch?v=40mKQrujwsQ",
+          "author": "IT Maaz",
+          "published_at": "2024-03-29T13:16:42Z",
+          "views": 232685714,
+          "likes": 7786045,
+          "comments": 14736,
+          "engagement_rate": 0.033524967501872505
+        },
+        {
+          "platform": "youtube",
+          "post_id": "bi0MgbpCVuk",
+          "title": "Strawberry reigns supreme in the top notes 🍓 #shorts #trending #fragrance  #catchysmells #itmaaz",
+          "url": "https://www.youtube.com/watch?v=bi0MgbpCVuk",
+          "author": "IT Maaz",
+          "published_at": "2024-03-11T14:43:04Z",
+          "views": 183677356,
+          "likes": 6731219,
+          "comments": 14095,
+          "engagement_rate": 0.03672371024330293
+        },
+        {
+          "platform": "youtube",
+          "post_id": "mNeVoEKwuwk",
+          "title": "Banda MS de Sergio Lizárraga - Tu Perfume (Video Oficial)",
+          "url": "https://www.youtube.com/watch?v=mNeVoEKwuwk",
+          "author": "BANDA MS",
+          "published_at": "2024-02-22T23:00:10Z",
+          "views": 155726267,
+          "likes": 313936,
+          "comments": 3671,
+          "engagement_rate": 0.002039521052668655
+        },
+        {
+          "platform": "youtube",
+          "post_id": "xlJ69RJpYn4",
+          "title": "Belo - Perfume (Ao Vivo)",
+          "url": "https://www.youtube.com/watch?v=xlJ69RJpYn4",
+          "author": "BeloVEVO",
+          "published_at": "2012-08-12T17:37:35Z",
+          "views": 146650325,
+          "likes": 685786,
+          "comments": 18223,
+          "engagement_rate": 0.004800596248252433
+        },
+        {
+          "platform": "youtube",
+          "post_id": "aC4M4SxJexg",
+          "title": "Derramo el Perfume - Montesanto ft Averly Morillo (Video Oficial)",
+          "url": "https://www.youtube.com/watch?v=aC4M4SxJexg",
+          "author": "Montesanto Oficial",
+          "published_at": "2021-05-15T01:00:15Z",
+          "views": 97262776,
+          "likes": 421667,
+          "comments": 8714,
+          "engagement_rate": 0.0044249302528646724
+        },
+        {
+          "platform": "youtube",
+          "post_id": "6xJLjFQXsZU",
+          "title": "Perfume A Tus Pies  - Jaz Jacob & En Espíritu y En Verdad (En Vivo)",
+          "url": "https://www.youtube.com/watch?v=6xJLjFQXsZU",
+          "author": "CEV Musik",
+          "published_at": "2022-04-10T02:21:19Z",
+          "views": 93181087,
+          "likes": 217527,
+          "comments": 5601,
+          "engagement_rate": 0.002394563179972348
+        },
+        {
+          "platform": "youtube",
+          "post_id": "wJPicWv_SGU",
+          "title": "DE FÉRIAS COM PRESENÇA | Perfume - Reinventar - Supera | Ao Vivo - Samba e Pagode",
+          "url": "https://www.youtube.com/watch?v=wJPicWv_SGU",
+          "author": "Grupo Presença Oficial",
+          "published_at": "2023-12-28T15:00:12Z",
+          "views": 89973804,
+          "likes": 102375,
+          "comments": 559,
+          "engagement_rate": 0.0011440441042150447
+        },
+        {
+          "platform": "youtube",
+          "post_id": "q6T0wOMsNrI",
+          "title": "[Official Music Video] Perfume 「FLASH」",
+          "url": "https://www.youtube.com/watch?v=q6T0wOMsNrI",
+          "author": "Perfume",
+          "published_at": "2016-04-12T15:00:04Z",
+          "views": 84487336,
+          "likes": 342776,
+          "comments": 13350,
+          "engagement_rate": 0.0042151405981128345
+        }
+      ],
+      "top_keywords": [
+        "perfume",
+        "trending",
+        "catchysmells",
+        "itmaaz",
+        "vivo",
+        "perfumer",
+        "youtuber",
+        "fragrance",
+        "oficial",
+        "golden",
+        "guy",
+        "gifted"
+      ],
+      "recommended_hooks": [
+        "Stop wasting money on perfume: do this perfume framework instead.",
+        "I tried 3 perfume tactics in 7 days — only this trending method worked.",
+        "Before you buy any perfume solution, check this 10-second test."
+      ],
+      "content_gaps": [
+        "Few creators explain beginner mistakes around perfume, trending, catchysmells.",
+        "Lack of side-by-side competitor breakdowns in perfume.",
+        "Not enough transparent pricing/value comparison content."
+      ],
+      "posting_recommendations": [
+        "Publish 4-6 short-form pieces per week with first-frame product proof.",
+        "Current benchmark engagement-rate from sampled trends: 1.18%.",
+        "Test hooks in first 2 seconds and retain winning variants for paid boosts."
+      ],
+      "generated_at": "2026-02-24T18:52:14.807808"
+    },
+    "campaign_strategy": "Tagline: Fogg Body Spray: Long-Lasting Confidence, Always Within Reach | Core Message: Fogg Body Spray is the everyday luxury every budget-conscious individual deserves. With its long-lasting fragrance and premium feel, it’s your secret weapon to staying confident, alluring, and unforgettable. | Key Triggers: {'sensory_appeal': 'Highlight the invigorating and captivating fragrance notes that linger all day.', 'identity_and_self_expression': 'Position Fogg as the perfect finishing touch to express individuality and style.', 'social_proof': 'Use testimonials and influencer endorsements to showcase its popularity and effectiveness.', 'desire_for_attraction': 'Emphasize the magnetic allure and confidence boost that comes with wearing Fogg.', 'exclusivity_and_status': 'Frame Fogg as a premium yet accessible choice for those who demand quality.'} | Execution Channels: ['Instagram', 'YouTube, TikTok', 'Facebook', 'Influencer collaborations', 'Retail activations']\n\nIdentity context: Product image attached (fog.webp).",
+    "blog_ideas": [
+      "Ultimate guide to choosing the right perfume solution in 2026",
+      "fogg body spray vs alternatives: transparent comparison",
+      "Top mistakes India budget-conscious home cooks make in perfume",
+      "Case-study: improving results using fogg body spray",
+      "ROI checklist before buying any perfume product"
+    ],
+    "tweet_ideas": [
+      "Confidence in a bottle. Fogg Body Spray keeps you fresh, alluring, and unforgettable all day. #FoggBodySpray #LongLastingFragrance",
+      "Why settle for less when you can have the best? Fogg Body Spray is your everyday luxury. #StayFresh #FoggIndia",
+      "Budget-conscious but love premium fragrances? Fogg Body Spray gives you the best of both worlds. #FoggFragrance #AffordableLuxury",
+      "Smell amazing, feel amazing. Fogg Body Spray is your secret to magnetic confidence. #FoggBodySpray #FragranceGoals",
+      "The secret to staying unforgettable? Fogg Body Spray. Long-lasting, captivating, and uniquely you. #FoggIndia #PerfumeLove",
+      "Indian home cooks, meet your new best friend: Fogg Body Spray. Stay fresh, even in the heat of the kitchen. #FoggFragrance #StayConfident",
+      "Step into every room with confidence. Fogg Body Spray is your ultimate fragrance armor. #FoggBodySpray #ConfidenceUnlocked",
+      "Fogg Body Spray: Because you deserve a fragrance that works as hard as you do. #StayFresh #FoggIndia"
+    ],
+    "reel_ideas": [
+      "POV: You discovered fogg body spray and everything changed",
+      "3-second hook showing fogg body spray in action",
+      "Before/After transformation reel using fogg body spray for India budget-conscious home cooks",
+      "Top 3 reasons India budget-conscious home cooks are switching to fogg body spray",
+      "Unboxing + first impression of fogg body spray"
+    ],
+    "short_video_ideas": [],
+    "poster_ideas": [
+      "Bold hero poster featuring fogg body spray with a single powerful tagline",
+      "Comparison poster: old way vs fogg body spray way",
+      "Lifestyle poster showing India budget-conscious home cooks using fogg body spray",
+      "Minimalist social proof poster for fogg body spray with key stat",
+      "Limited-time offer poster for fogg body spray"
+    ]
+  },
+  "poster_assets": [
+    {
+      "name": "dalle_0e2733e3923b4a01adb3edc97d93273a.png",
+      "asset_type": "poster",
+      "path": "renders/dalle_0e2733e3923b4a01adb3edc97d93273a.png",
+      "download_url": "/api/v1/market-intel/download?path=renders/dalle_0e2733e3923b4a01adb3edc97d93273a.png"
+    }
+  ],
+  "video_asset": null,
+  "generated_at": "2026-02-24T18:53:03.905065Z"
+}

@@ -1,0 +1,629 @@
+{
+  "identity_vault": {
+    "project_id": "617a1f5b-9fe9-441f-9780-d3b0e5146904",
+    "embedding_id": "1d408279-7457-4cf5-8666-777cb2ffa0db",
+    "status": "stored",
+    "confidence": 0.95,
+    "visual_dna": {
+      "product_category": "Kitchen Appliance",
+      "product_description": "The Pigeon Air Fryer is a sleek and modern kitchen appliance designed for versatile cooking functions such as frying, defrosting, roasting, grilling, and baking. It features a compact, rounded design with a glossy black finish accented by gold trim, giving it a premium and stylish appearance. The digital touch interface on the top provides intuitive controls and displays cooking settings, enhancing user convenience. The pull-out basket with a handle ensures easy access to food, while the overall design prioritizes functionality and aesthetics.",
+      "materials": {
+        "primary_material": "plastic",
+        "secondary_materials": [
+          "metal",
+          "glass"
+        ],
+        "surface_finish": "glossy",
+        "transparency": "opaque",
+        "reflectivity": 0.6,
+        "texture_description": "Smooth and polished surface with a reflective finish.",
+        "color_palette": [
+          "#000000",
+          "#FFD700",
+          "#FFFFFF"
+        ]
+      },
+      "lighting": {
+        "primary_light_direction": "top-left",
+        "light_type": "studio",
+        "light_intensity": "medium",
+        "shadow_characteristics": "Soft shadows cast to the right and below the product.",
+        "highlights": [
+          "on the top surface and gold accents"
+        ],
+        "color_temperature": "neutral"
+      },
+      "structure": {
+        "overall_shape": "rounded rectangular with a slightly tapered top",
+        "dimensions_ratio": "compact/cube",
+        "key_components": [
+          "main body",
+          "pull-out basket",
+          "digital touch interface",
+          "handle"
+        ],
+        "symmetry": "symmetric",
+        "distinctive_features": [
+          "gold accents",
+          "digital touch interface",
+          "compact design"
+        ],
+        "brand_elements": [
+          "Pigeon logo",
+          "text on the interface"
+        ]
+      },
+      "motion_recommendations": [
+        "slow 360-degree rotation to showcase the design",
+        "zoom in on the digital interface to highlight controls",
+        "pull-out motion of the basket to demonstrate functionality"
+      ],
+      "camera_angle_suggestions": [
+        "front angle to show the overall design",
+        "top-down angle to highlight the digital interface",
+        "side angle to emphasize the handle and basket"
+      ],
+      "confidence_score": 0.95
+    }
+  },
+  "market_intel": {
+    "trend_analysis": {
+      "category": "Kitchen Appliances",
+      "platform": "youtube",
+      "region_code": "IN",
+      "data_source": "youtube_data_api",
+      "top_posts": [
+        {
+          "platform": "youtube",
+          "post_id": "9C4rAMQlUiE",
+          "title": "Gadget Channel😍 New gadgets, Kitchen tools, Household appliances, Creativity in life",
+          "url": "https://www.youtube.com/watch?v=9C4rAMQlUiE",
+          "author": "GadGet Channel",
+          "published_at": "2023-09-11T00:49:22Z",
+          "views": 387077550,
+          "likes": 2983902,
+          "comments": 998,
+          "engagement_rate": 0.007711374632809368
+        },
+        {
+          "platform": "youtube",
+          "post_id": "c662HAK515g",
+          "title": "Alibaba Gadgets!🥰Tool Items, New Gadgets, Smart Kitchen Appliances, Home Cleaning/Inventions #shorts",
+          "url": "https://www.youtube.com/watch?v=c662HAK515g",
+          "author": "Alibaba Gadgets",
+          "published_at": "2023-08-19T13:51:32Z",
+          "views": 353853613,
+          "likes": 3036082,
+          "comments": 3138,
+          "engagement_rate": 0.00858891894372151
+        },
+        {
+          "platform": "youtube",
+          "post_id": "O1iTw98dAwo",
+          "title": "Alibaba Utilities! 😍New Gadgets, Smart Kitchen Appliances, Tools, Utensils, Home Cleaning, Beauty",
+          "url": "https://www.youtube.com/watch?v=O1iTw98dAwo",
+          "author": "Color Sky",
+          "published_at": "2025-03-18T12:00:36Z",
+          "views": 342996739,
+          "likes": 1688176,
+          "comments": 1258,
+          "engagement_rate": 0.0049255103851001915
+        },
+        {
+          "platform": "youtube",
+          "post_id": "T5pn59-3zNs",
+          "title": "Cool Items!🥰You can enjoy a comfortable bath at home.  #shorts",
+          "url": "https://www.youtube.com/watch?v=T5pn59-3zNs",
+          "author": "Cool Items Official",
+          "published_at": "2024-08-26T14:00:26Z",
+          "views": 286940742,
+          "likes": 2627762,
+          "comments": 1455,
+          "engagement_rate": 0.009162926748129758
+        },
+        {
+          "platform": "youtube",
+          "post_id": "-wWSvNwFJF8",
+          "title": "Alibaba Utilities!🥰New Gadgets, Smart Kitchen Appliances, Tools, Utensils, Home Cleaning, Beauty",
+          "url": "https://www.youtube.com/watch?v=-wWSvNwFJF8",
+          "author": "Alibaba Utilities",
+          "published_at": "2023-09-20T09:39:40Z",
+          "views": 262896590,
+          "likes": 2607915,
+          "comments": 2556,
+          "engagement_rate": 0.009929649524932978
+        },
+        {
+          "platform": "youtube",
+          "post_id": "xfAJ9REwa8s",
+          "title": "Cool Items!🥰Quick disinfection device  #shorts",
+          "url": "https://www.youtube.com/watch?v=xfAJ9REwa8s",
+          "author": "Cool Items Official",
+          "published_at": "2024-09-05T14:01:00Z",
+          "views": 254371182,
+          "likes": 2182203,
+          "comments": 2193,
+          "engagement_rate": 0.008587435034209182
+        },
+        {
+          "platform": "youtube",
+          "post_id": "kQpBCQLodN0",
+          "title": "Smart Cool Tool!🥰New Viral Gadgets, Smart Kitchen Appliances, Tools, Utensils, Home Cleaning #shorts",
+          "url": "https://www.youtube.com/watch?v=kQpBCQLodN0",
+          "author": "Smart Cool Tool",
+          "published_at": "2024-05-23T04:27:37Z",
+          "views": 250085138,
+          "likes": 1816653,
+          "comments": 1430,
+          "engagement_rate": 0.007269856235919145
+        },
+        {
+          "platform": "youtube",
+          "post_id": "OgohpBCmBhk",
+          "title": "Cool Gadgets!😍Smart Appliances,New Gadgets, Kitchen Gadgets, Home Gadgets,Inventions🙏P-209 #shorts",
+          "url": "https://www.youtube.com/watch?v=OgohpBCmBhk",
+          "author": "New Sky TV",
+          "published_at": "2023-04-02T01:00:13Z",
+          "views": 243995461,
+          "likes": 2525527,
+          "comments": 1000,
+          "engagement_rate": 0.010354811477415148
+        },
+        {
+          "platform": "youtube",
+          "post_id": "PmKwxtoG6a0",
+          "title": "Cool Items!🥰 Keep yourself clean even when you're outside! #shorts",
+          "url": "https://www.youtube.com/watch?v=PmKwxtoG6a0",
+          "author": "Cool Items Official",
+          "published_at": "2024-09-09T12:00:24Z",
+          "views": 240007501,
+          "likes": 2433965,
+          "comments": 1431,
+          "engagement_rate": 0.010147166192109971
+        },
+        {
+          "platform": "youtube",
+          "post_id": "BKPQNxmCmOY",
+          "title": "Alibaba Gadgets!🥰Tool Items, New Gadgets, Smart Kitchen Appliances, Home Cleaning/Inventions #shorts",
+          "url": "https://www.youtube.com/watch?v=BKPQNxmCmOY",
+          "author": "Alibaba Gadgets",
+          "published_at": "2023-08-09T07:52:02Z",
+          "views": 230148997,
+          "likes": 2285901,
+          "comments": 3865,
+          "engagement_rate": 0.009949059217494656
+        }
+      ],
+      "top_keywords": [
+        "gadgets",
+        "kitchen",
+        "appliances",
+        "smart",
+        "home",
+        "items",
+        "cleaning",
+        "cool",
+        "tools",
+        "alibaba",
+        "tool",
+        "inventions"
+      ],
+      "recommended_hooks": [
+        "Stop wasting money on Kitchen Appliances: do this gadgets framework instead.",
+        "I tried 3 Kitchen Appliances tactics in 7 days — only this kitchen method worked.",
+        "Before you buy any Kitchen Appliances solution, check this 10-second test."
+      ],
+      "content_gaps": [
+        "Few creators explain beginner mistakes around gadgets, kitchen, appliances.",
+        "Lack of side-by-side competitor breakdowns in Kitchen Appliances.",
+        "Not enough transparent pricing/value comparison content."
+      ],
+      "posting_recommendations": [
+        "Publish 4-6 short-form pieces per week with first-frame product proof.",
+        "Current benchmark engagement-rate from sampled trends: 0.87%.",
+        "Test hooks in first 2 seconds and retain winning variants for paid boosts."
+      ],
+      "generated_at": "2026-02-16T14:25:30.951912"
+    },
+    "competitor_handles": [
+      "philipsindia",
+      "havellsindia",
+      "agaro_lifestyle"
+    ],
+    "competitor_analysis": [
+      {
+        "competitor": "philipsindia",
+        "top_questions": [
+          "What hooks in philipsindia are currently outperforming?"
+        ],
+        "complaints": [
+          "Few creators explain beginner mistakes around philips, air, fryer.",
+          "Lack of side-by-side competitor breakdowns in philipsindia Kitchen Appliances.",
+          "Not enough transparent pricing/value comparison content."
+        ],
+        "viral_hooks": [
+          "Stop wasting money on philipsindia Kitchen Appliances: do this philips framework instead.",
+          "I tried 3 philipsindia Kitchen Appliances tactics in 7 days — only this air method worked.",
+          "Before you buy any philipsindia Kitchen Appliances solution, check this 10-second test."
+        ],
+        "opportunity_gap": "API-first trend scan (youtube_data_api). Top keywords: philips, air, fryer, airfryer, kitchen, jab"
+      },
+      {
+        "competitor": "havellsindia",
+        "top_questions": [
+          "What hooks in havellsindia are currently outperforming?"
+        ],
+        "complaints": [
+          "Few creators explain beginner mistakes around havells, ceiling, fan.",
+          "Lack of side-by-side competitor breakdowns in havellsindia Kitchen Appliances.",
+          "Not enough transparent pricing/value comparison content."
+        ],
+        "viral_hooks": [
+          "Stop wasting money on havellsindia Kitchen Appliances: do this havells framework instead.",
+          "I tried 3 havellsindia Kitchen Appliances tactics in 7 days — only this ceiling method worked.",
+          "Before you buy any havellsindia Kitchen Appliances solution, check this 10-second test."
+        ],
+        "opportunity_gap": "API-first trend scan (youtube_data_api). Top keywords: havells, ceiling, fan, smart, home, appliances"
+      },
+      {
+        "competitor": "agaro_lifestyle",
+        "top_questions": [
+          "What hooks in agaro_lifestyle are currently outperforming?"
+        ],
+        "complaints": [
+          "Few creators explain beginner mistakes around agarolifestyle, agaro, coffee.",
+          "Lack of side-by-side competitor breakdowns in agaro_lifestyle Kitchen Appliances.",
+          "Not enough transparent pricing/value comparison content."
+        ],
+        "viral_hooks": [
+          "Stop wasting money on agaro_lifestyle Kitchen Appliances: do this agarolifestyle framework instead.",
+          "I tried 3 agaro_lifestyle Kitchen Appliances tactics in 7 days — only this agaro method worked.",
+          "Before you buy any agaro_lifestyle Kitchen Appliances solution, check this 10-second test."
+        ],
+        "opportunity_gap": "API-first trend scan (youtube_data_api). Top keywords: agarolifestyle, agaro, coffee, everydayexpert, unboxing, made"
+      }
+    ]
+  },
+  "gap_analysis": {
+    "top_unanswered_questions": [
+      "What hooks in philipsindia are currently outperforming?",
+      "What hooks in havellsindia are currently outperforming?",
+      "What hooks in agaro_lifestyle are currently outperforming?"
+    ],
+    "top_complaints": [
+      "Few creators explain beginner mistakes around philips, air, fryer.",
+      "Lack of side-by-side competitor breakdowns in philipsindia Kitchen Appliances.",
+      "Few creators explain beginner mistakes around havells, ceiling, fan.",
+      "Lack of side-by-side competitor breakdowns in havellsindia Kitchen Appliances.",
+      "Few creators explain beginner mistakes around agarolifestyle, agaro, coffee.",
+      "Lack of side-by-side competitor breakdowns in agaro_lifestyle Kitchen Appliances."
+    ],
+    "winning_hooks_from_market": [
+      "Stop wasting money on philipsindia Kitchen Appliances: do this philips framework instead.",
+      "I tried 3 philipsindia Kitchen Appliances tactics in 7 days — only this air method worked.",
+      "Stop wasting money on havellsindia Kitchen Appliances: do this havells framework instead.",
+      "I tried 3 havellsindia Kitchen Appliances tactics in 7 days — only this ceiling method worked.",
+      "Stop wasting money on agaro_lifestyle Kitchen Appliances: do this agarolifestyle framework instead.",
+      "I tried 3 agaro_lifestyle Kitchen Appliances tactics in 7 days — only this agaro method worked."
+    ],
+    "market_gaps": [
+      "Few creators explain beginner mistakes around gadgets, kitchen, appliances.",
+      "Lack of side-by-side competitor breakdowns in Kitchen Appliances.",
+      "Not enough transparent pricing/value comparison content."
+    ],
+    "recommended_positioning": "Overview: Position the Pigeon Air Fryer as the go-to budget-friendly kitchen appliance for health-conscious Indian home cooks. Leverage affordability, ease of use, and healthy cooking benefits to create a relatable and value-driven narrative. Highlight comparisons with competitors and educate users on maximizing its functionality. | Channels: ['Instagram', 'YouTube', 'Twitter', 'Facebook'] | Approach: {'educational': 'Create content that addresses beginner mistakes, transparent pricing comparisons, and health benefits of air fryers.', 'trend-driven': \"Capitalize on trending keywords like 'smart kitchen tools' and 'cool gadgets' to align with current consumer interests.\", 'value-focused': 'Showcase how the product offers high utility at a price point accessible to budget-conscious consumers.'}\n\nIdentity context: Product image attached (61GlLfqLt0L._SL1500_1200x.webp).\n\nVideo mode: ON — prioritize reel/short concepts suitable for production rendering."
+  },
+  "competitor_matrix": [
+    {
+      "source": "competitor",
+      "title": "Gadget Channel😍 New gadgets, Kitchen tools, Household appliances, Creativity in life",
+      "author": "GadGet Channel",
+      "views": 387077550,
+      "engagement_rate": 0.0077,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Alibaba Gadgets!🥰Tool Items, New Gadgets, Smart Kitchen Appliances, Home Cleaning/Inventions #shorts",
+      "author": "Alibaba Gadgets",
+      "views": 353853613,
+      "engagement_rate": 0.0086,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Alibaba Utilities! 😍New Gadgets, Smart Kitchen Appliances, Tools, Utensils, Home Cleaning, Beauty",
+      "author": "Color Sky",
+      "views": 342996739,
+      "engagement_rate": 0.0049,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Cool Items!🥰You can enjoy a comfortable bath at home.  #shorts",
+      "author": "Cool Items Official",
+      "views": 286940742,
+      "engagement_rate": 0.0092,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Alibaba Utilities!🥰New Gadgets, Smart Kitchen Appliances, Tools, Utensils, Home Cleaning, Beauty",
+      "author": "Alibaba Utilities",
+      "views": 262896590,
+      "engagement_rate": 0.0099,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Cool Items!🥰Quick disinfection device  #shorts",
+      "author": "Cool Items Official",
+      "views": 254371182,
+      "engagement_rate": 0.0086,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Smart Cool Tool!🥰New Viral Gadgets, Smart Kitchen Appliances, Tools, Utensils, Home Cleaning #shorts",
+      "author": "Smart Cool Tool",
+      "views": 250085138,
+      "engagement_rate": 0.0073,
+      "score": 100.0
+    },
+    {
+      "source": "competitor",
+      "title": "Cool Gadgets!😍Smart Appliances,New Gadgets, Kitchen Gadgets, Home Gadgets,Inventions🙏P-209 #shorts",
+      "author": "New Sky TV",
+      "views": 243995461,
+      "engagement_rate": 0.0104,
+      "score": 100.0
+    },
+    {
+      "source": "our_campaign",
+      "title": "Pigeon Air Fryer",
+      "author": "Catalyst Nexus AI",
+      "views": null,
+      "engagement_rate": null,
+      "score": 99.0,
+      "benchmark": 95.0,
+      "uplift_percent": 4.21
+    }
+  ],
+  "scoring": {
+    "ai_score": 99.0,
+    "competitor_score": 95.0,
+    "uplift_percent": 4.21,
+    "verdict": "Ranked above competitor benchmark",
+    "factors": [
+      "Gap coverage: 50.0%",
+      "Hook strength signal: 0.37",
+      "CTA density signal: 0.41",
+      "Urgency signal: 0.01",
+      "Idea volume bonus: 7.5"
+    ],
+    "feature_vector": {
+      "hook_strength": 0.3677,
+      "cta_density": 0.413,
+      "sentiment_score": 0.5286,
+      "question_density": 0.0761,
+      "urgency_score": 0.0101,
+      "phrase_diversity": 0.3999,
+      "avg_segment_length": 0.1566,
+      "keyword_density": 0.1706
+    }
+  },
+  "campaign": {
+    "category_trend_analysis": {
+      "category": "Kitchen Appliances",
+      "platform": "youtube",
+      "region_code": "IN",
+      "data_source": "youtube_data_api",
+      "top_posts": [
+        {
+          "platform": "youtube",
+          "post_id": "9C4rAMQlUiE",
+          "title": "Gadget Channel😍 New gadgets, Kitchen tools, Household appliances, Creativity in life",
+          "url": "https://www.youtube.com/watch?v=9C4rAMQlUiE",
+          "author": "GadGet Channel",
+          "published_at": "2023-09-11T00:49:22Z",
+          "views": 387077550,
+          "likes": 2983902,
+          "comments": 998,
+          "engagement_rate": 0.007711374632809368
+        },
+        {
+          "platform": "youtube",
+          "post_id": "c662HAK515g",
+          "title": "Alibaba Gadgets!🥰Tool Items, New Gadgets, Smart Kitchen Appliances, Home Cleaning/Inventions #shorts",
+          "url": "https://www.youtube.com/watch?v=c662HAK515g",
+          "author": "Alibaba Gadgets",
+          "published_at": "2023-08-19T13:51:32Z",
+          "views": 353853613,
+          "likes": 3036082,
+          "comments": 3138,
+          "engagement_rate": 0.00858891894372151
+        },
+        {
+          "platform": "youtube",
+          "post_id": "O1iTw98dAwo",
+          "title": "Alibaba Utilities! 😍New Gadgets, Smart Kitchen Appliances, Tools, Utensils, Home Cleaning, Beauty",
+          "url": "https://www.youtube.com/watch?v=O1iTw98dAwo",
+          "author": "Color Sky",
+          "published_at": "2025-03-18T12:00:36Z",
+          "views": 342996739,
+          "likes": 1688176,
+          "comments": 1258,
+          "engagement_rate": 0.0049255103851001915
+        },
+        {
+          "platform": "youtube",
+          "post_id": "T5pn59-3zNs",
+          "title": "Cool Items!🥰You can enjoy a comfortable bath at home.  #shorts",
+          "url": "https://www.youtube.com/watch?v=T5pn59-3zNs",
+          "author": "Cool Items Official",
+          "published_at": "2024-08-26T14:00:26Z",
+          "views": 286940742,
+          "likes": 2627762,
+          "comments": 1455,
+          "engagement_rate": 0.009162926748129758
+        },
+        {
+          "platform": "youtube",
+          "post_id": "-wWSvNwFJF8",
+          "title": "Alibaba Utilities!🥰New Gadgets, Smart Kitchen Appliances, Tools, Utensils, Home Cleaning, Beauty",
+          "url": "https://www.youtube.com/watch?v=-wWSvNwFJF8",
+          "author": "Alibaba Utilities",
+          "published_at": "2023-09-20T09:39:40Z",
+          "views": 262896590,
+          "likes": 2607915,
+          "comments": 2556,
+          "engagement_rate": 0.009929649524932978
+        },
+        {
+          "platform": "youtube",
+          "post_id": "xfAJ9REwa8s",
+          "title": "Cool Items!🥰Quick disinfection device  #shorts",
+          "url": "https://www.youtube.com/watch?v=xfAJ9REwa8s",
+          "author": "Cool Items Official",
+          "published_at": "2024-09-05T14:01:00Z",
+          "views": 254371182,
+          "likes": 2182203,
+          "comments": 2193,
+          "engagement_rate": 0.008587435034209182
+        },
+        {
+          "platform": "youtube",
+          "post_id": "kQpBCQLodN0",
+          "title": "Smart Cool Tool!🥰New Viral Gadgets, Smart Kitchen Appliances, Tools, Utensils, Home Cleaning #shorts",
+          "url": "https://www.youtube.com/watch?v=kQpBCQLodN0",
+          "author": "Smart Cool Tool",
+          "published_at": "2024-05-23T04:27:37Z",
+          "views": 250085138,
+          "likes": 1816653,
+          "comments": 1430,
+          "engagement_rate": 0.007269856235919145
+        },
+        {
+          "platform": "youtube",
+          "post_id": "OgohpBCmBhk",
+          "title": "Cool Gadgets!😍Smart Appliances,New Gadgets, Kitchen Gadgets, Home Gadgets,Inventions🙏P-209 #shorts",
+          "url": "https://www.youtube.com/watch?v=OgohpBCmBhk",
+          "author": "New Sky TV",
+          "published_at": "2023-04-02T01:00:13Z",
+          "views": 243995461,
+          "likes": 2525527,
+          "comments": 1000,
+          "engagement_rate": 0.010354811477415148
+        },
+        {
+          "platform": "youtube",
+          "post_id": "PmKwxtoG6a0",
+          "title": "Cool Items!🥰 Keep yourself clean even when you're outside! #shorts",
+          "url": "https://www.youtube.com/watch?v=PmKwxtoG6a0",
+          "author": "Cool Items Official",
+          "published_at": "2024-09-09T12:00:24Z",
+          "views": 240007501,
+          "likes": 2433965,
+          "comments": 1431,
+          "engagement_rate": 0.010147166192109971
+        },
+        {
+          "platform": "youtube",
+          "post_id": "BKPQNxmCmOY",
+          "title": "Alibaba Gadgets!🥰Tool Items, New Gadgets, Smart Kitchen Appliances, Home Cleaning/Inventions #shorts",
+          "url": "https://www.youtube.com/watch?v=BKPQNxmCmOY",
+          "author": "Alibaba Gadgets",
+          "published_at": "2023-08-09T07:52:02Z",
+          "views": 230148997,
+          "likes": 2285901,
+          "comments": 3865,
+          "engagement_rate": 0.009949059217494656
+        }
+      ],
+      "top_keywords": [
+        "gadgets",
+        "kitchen",
+        "appliances",
+        "smart",
+        "home",
+        "items",
+        "cleaning",
+        "cool",
+        "tools",
+        "alibaba",
+        "tool",
+        "inventions"
+      ],
+      "recommended_hooks": [
+        "Stop wasting money on Kitchen Appliances: do this gadgets framework instead.",
+        "I tried 3 Kitchen Appliances tactics in 7 days — only this kitchen method worked.",
+        "Before you buy any Kitchen Appliances solution, check this 10-second test."
+      ],
+      "content_gaps": [
+        "Few creators explain beginner mistakes around gadgets, kitchen, appliances.",
+        "Lack of side-by-side competitor breakdowns in Kitchen Appliances.",
+        "Not enough transparent pricing/value comparison content."
+      ],
+      "posting_recommendations": [
+        "Publish 4-6 short-form pieces per week with first-frame product proof.",
+        "Current benchmark engagement-rate from sampled trends: 0.87%.",
+        "Test hooks in first 2 seconds and retain winning variants for paid boosts."
+      ],
+      "generated_at": "2026-02-16T14:25:30.951912"
+    },
+    "campaign_strategy": "Overview: Position the Pigeon Air Fryer as the go-to budget-friendly kitchen appliance for health-conscious Indian home cooks. Leverage affordability, ease of use, and healthy cooking benefits to create a relatable and value-driven narrative. Highlight comparisons with competitors and educate users on maximizing its functionality. | Channels: ['Instagram', 'YouTube', 'Twitter', 'Facebook'] | Approach: {'educational': 'Create content that addresses beginner mistakes, transparent pricing comparisons, and health benefits of air fryers.', 'trend-driven': \"Capitalize on trending keywords like 'smart kitchen tools' and 'cool gadgets' to align with current consumer interests.\", 'value-focused': 'Showcase how the product offers high utility at a price point accessible to budget-conscious consumers.'}\n\nIdentity context: Product image attached (61GlLfqLt0L._SL1500_1200x.webp).\n\nVideo mode: ON — prioritize reel/short concepts suitable for production rendering.",
+    "blog_ideas": [
+      "5 Beginner Mistakes to Avoid When Using an Air Fryer",
+      "Pigeon Air Fryer vs Competitors: Which is the Best Budget Option?",
+      "Healthy Recipes You Can Make in Under 20 Minutes with the Pigeon Air Fryer",
+      "Why Air Fryers Are the Ultimate Kitchen Gadget for Indian Home Cooks",
+      "Affordable Gadgets for Healthy Cooking: A Guide to Smart Kitchen Tools"
+    ],
+    "tweet_ideas": [
+      "Say goodbye to oily food! Cook healthy meals for your family with the Pigeon Air Fryer — affordable, smart, and perfect for Indian kitchens. #HealthyCooking #SmartKitchen",
+      "Did you know you can make samosas and fries in an air fryer? The Pigeon Air Fryer is here to make your snacks guilt-free! #KitchenGadgets #AirFryer",
+      "Stop wasting money on overpriced kitchen gadgets! The Pigeon Air Fryer offers premium performance at just 3k-5k INR. #BudgetFriendly #KitchenTools",
+      "Healthy cooking doesn’t have to break the bank! Get the Pigeon Air Fryer and enjoy oil-free meals every day. #SmartCooking #AffordableAppliances",
+      "Looking for the perfect Diwali gift? The Pigeon Air Fryer is a thoughtful, budget-friendly option for home cooks. #FestiveSeason #Gifts",
+      "Quick tip: Air fryers are not just for fries! Cook veggies, paneer tikka, and even desserts with the Pigeon Air Fryer. #KitchenHacks #HealthyEating",
+      "Why spend hours in the kitchen? The Pigeon Air Fryer helps you cook delicious meals in minutes. #QuickCooking #SmartTools",
+      "Before you buy any air fryer, check out the Pigeon Air Fryer — smart, affordable, and perfect for Indian kitchens. #KitchenAppliances"
+    ],
+    "reel_ideas": [
+      "Show a quick recipe for oil-free fries using the Pigeon Air Fryer with step-by-step visuals.",
+      "Create a comparison reel showing the Pigeon Air Fryer vs a competitor product in terms of price, design, and results.",
+      "Highlight beginner mistakes like overcrowding the air fryer basket and how to avoid them.",
+      "Film a festive cooking session using the air fryer to prepare Diwali snacks like samosas and kebabs.",
+      "Showcase the unboxing and first impressions of the Pigeon Air Fryer, emphasizing its affordability and ease of use."
+    ],
+    "short_video_ideas": [
+      "How to make crispy paneer tikka in under 10 minutes with the Pigeon Air Fryer.",
+      "Affordable air fryer hacks: 3 ways to cook healthy meals on a budget.",
+      "Side-by-side comparison of air-fried vs deep-fried snacks — which one is healthier?",
+      "Explaining why the Pigeon Air Fryer is the best choice for Indian home cooks (price, performance, recipes).",
+      "Quick demo: Cooking a complete meal (veggies + protein) in the Pigeon Air Fryer."
+    ],
+    "poster_ideas": [
+      "A vibrant poster saying 'Healthy Cooking Starts Here!' with the Pigeon Air Fryer front and center.",
+      "Side-by-side comparison chart showing Pigeon Air Fryer vs competitors (price, features, benefits).",
+      "Recipe-focused poster featuring 3 dishes you can make in the Pigeon Air Fryer with images and cooking times.",
+      "Festive-themed poster: 'Celebrate Diwali with Guilt-Free Snacks!' featuring the air fryer and popular Indian snacks.",
+      "Minimalist poster with the tagline 'Smart Cooking Made Affordable' and the air fryer highlighted."
+    ]
+  },
+  "poster_assets": [
+    {
+      "name": "pigeon-air-fryer_poster_1_20260216_142604.svg",
+      "asset_type": "poster",
+      "path": "backend/output/demo_assets/pigeon-air-fryer_poster_1_20260216_142604.svg",
+      "download_url": "/api/v1/market-intel/download?path=backend/output/demo_assets/pigeon-air-fryer_poster_1_20260216_142604.svg"
+    }
+  ],
+  "video_asset": {
+    "name": "pigeon-air-fryer_video_blueprint_20260216_142605.md",
+    "asset_type": "video_blueprint",
+    "path": "backend/output/demo_assets/pigeon-air-fryer_video_blueprint_20260216_142605.md",
+    "download_url": "/api/v1/market-intel/download?path=backend/output/demo_assets/pigeon-air-fryer_video_blueprint_20260216_142605.md"
+  },
+  "generated_at": "2026-02-16T14:26:05.708820Z"
+}

@@ -1,0 +1,122 @@
+# =============================================================================
+# Catalyst Nexus Core - Docker Compose
+# =============================================================================
+# Development environment with all services
+# Usage: docker-compose up -d
+# =============================================================================
+
+version: '3.8'
+
+services:
+  # ===========================================================================
+  # Backend API Service
+  # ===========================================================================
+  backend:
+    build:
+      context: ../..
+      dockerfile: infrastructure/docker/Dockerfile.backend
+    container_name: catalyst-nexus-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://catalyst:catalyst@postgres:5432/catalyst_nexus
+      - REDIS_URL=redis://redis:6379/0
+      - ENVIRONMENT=development
+      - DEBUG=true
+    env_file:
+      - ../../.env
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ../../backend:/app/backend:ro
+      - storage_data:/app/storage
+    restart: unless-stopped
+    networks:
+      - catalyst-network
+
+  # ===========================================================================
+  # PostgreSQL Database
+  # ===========================================================================
+  postgres:
+    image: postgres:15-alpine
+    container_name: catalyst-nexus-postgres
+    environment:
+      - POSTGRES_USER=catalyst
+      - POSTGRES_PASSWORD=catalyst
+      - POSTGRES_DB=catalyst_nexus
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U catalyst -d catalyst_nexus"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - catalyst-network
+
+  # ===========================================================================
+  # Redis Cache
+  # ===========================================================================
+  redis:
+    image: redis:7-alpine
+    container_name: catalyst-nexus-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - catalyst-network
+
+  # ===========================================================================
+  # Celery Worker (Background Tasks)
+  # ===========================================================================
+  celery-worker:
+    build:
+      context: ../..
+      dockerfile: infrastructure/docker/Dockerfile.backend
+    container_name: catalyst-nexus-celery
+    command: celery -A backend.app.core.celery worker --loglevel=info
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://catalyst:catalyst@postgres:5432/catalyst_nexus
+      - REDIS_URL=redis://redis:6379/0
+    env_file:
+      - ../../.env
+    depends_on:
+      - backend
+      - redis
+    volumes:
+      - ../../backend:/app/backend:ro
+      - storage_data:/app/storage
+    restart: unless-stopped
+    networks:
+      - catalyst-network
+
+# =============================================================================
+# Volumes
+# =============================================================================
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  storage_data:
+    driver: local
+
+# =============================================================================
+# Networks
+# =============================================================================
+networks:
+  catalyst-network:
+    driver: bridge
