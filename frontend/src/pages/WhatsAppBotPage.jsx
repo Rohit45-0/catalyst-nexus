@@ -427,8 +427,14 @@ export default function WhatsAppBotPage() {
                                     <div className="space-y-1 mt-2">
                                         {analytics.peak_hours.map((hourStr, i) => (
                                             <p key={i} className="text-lg font-light text-white flex justify-between">
-                                                <span>{hourStr.split(' ')[0]} {hourStr.split(' ')[1]}</span>
-                                                <span className="text-sm text-neutral-500">{hourStr.split('(')[1].replace(')', '')}</span>
+                                                {hourStr.includes("(") ? (
+                                                    <>
+                                                        <span>{hourStr.split(' ')[0]} {hourStr.split(' ')[1]}</span>
+                                                        <span className="text-sm text-neutral-500">{hourStr.split('(')[1].replace(')', '')}</span>
+                                                    </>
+                                                ) : (
+                                                    <span className="text-sm text-neutral-500 italic">{hourStr}</span>
+                                                )}
                                             </p>
                                         ))}
                                     </div>
