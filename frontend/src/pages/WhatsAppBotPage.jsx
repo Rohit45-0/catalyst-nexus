@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { getCurrentUser } from "../services/auth";
-import { Copy, Check, Clock, Calendar, CheckSquare, BarChart, TrendingUp, Sparkles, Store, Scissors, UtensilsCrossed, ShoppingCart, GraduationCap, Globe } from "lucide-react";
+import { Copy, Check, Clock, Calendar, CheckSquare, BarChart, TrendingUp, Sparkles, Store, Scissors, UtensilsCrossed, ShoppingCart, GraduationCap, Globe, BookOpen, RefreshCw, FileText, Zap } from "lucide-react";
 
 const PLUGINS_API = import.meta.env.VITE_PLUGINS_API_URL || "https://web-production-ba9e.up.railway.app";
 
@@ -23,7 +23,7 @@ export default function WhatsAppBotPage() {
 
     const [analytics, setAnalytics] = useState(null);
     const [hasCopied, setHasCopied] = useState(false);
-    const [loading, setLoading] = useState(true);
+    const [syncing, setSyncing] = useState(false);
     const [user, setUser] = useState(null);
 
     const loadBotConfig = async (currentUser) => {
@@ -96,6 +96,19 @@ export default function WhatsAppBotPage() {
         } catch (err) {
             console.error(err);
             alert("Failed to save rules.");
+        }
+    };
+
+    const syncKnowledgeBase = async () => {
+        try {
+            setSyncing(true);
+            const res = await axios.post(`${PLUGINS_API}/api/v1/knowledge/sync/${botConfig.id}`);
+            alert(res.data.message || "Sync successful!");
+        } catch (err) {
+            console.error(err);
+            alert("Failed to sync knowledge base. Make sure your Google account is connected.");
+        } finally {
+            setSyncing(false);
         }
     };
 
@@ -245,26 +258,83 @@ export default function WhatsAppBotPage() {
                                         <div>
                                             <h2 className="text-lg font-medium text-white mb-1 flex items-center gap-2">
                                                 <Calendar size={18} className="text-blue-400" />
-                                                Google Calendar Sync
+                                                Integrations (Calendar & Docs)
                                             </h2>
-                                            <p className="text-sm text-neutral-400">Allow AI to insert bookings directly into your calendar.</p>
+                                            <p className="text-sm text-neutral-400">Connect Google to manage bookings and your bot's training doc.</p>
                                         </div>
                                     </div>
 
-                                    {botConfig.google_calendar_token ? (
-                                        <div className="flex items-center gap-3 text-sm text-green-400 bg-green-500/10 border border-green-500/20 p-4 rounded-xl">
+                                    {botConfig.has_calendar ? (
+                                        <div className="flex items-center gap-3 text-sm text-green-400 bg-green-500/10 border border-green-500/20 p-4 rounded-xl mb-4">
                                             <CheckSquare size={18} />
-                                            Calendar Successfully Connected
+                                            Google Account Connected
                                         </div>
                                     ) : (
                                         <button
                                             onClick={() => window.open(`${PLUGINS_API}/api/v1/calendar/connect/${botConfig.id}`, '_blank')}
-                                            className="w-full flex justify-center items-center gap-2 px-4 py-3 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition-colors border border-neutral-700"
+                                            className="w-full flex justify-center items-center gap-2 px-4 py-3 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition-colors border border-neutral-700 mb-4"
                                         >
                                             <img src="https://www.google.com/favicon.ico" className="w-4 h-4" alt="Google" />
-                                            Connect Google Calendar
+                                            Connect Google Account
                                         </button>
                                     )}
+
+                                    {/* Knowledge Base Section */}
+                                    <div className="pt-6 border-t border-neutral-800">
+                                        <div className="flex items-center gap-2 mb-4">
+                                            <BookOpen size={18} className="text-purple-400" />
+                                            <span className="text-sm font-medium text-white">AI Knowledge Base</span>
+                                        </div>
+
+                                        {botConfig.google_doc_id ? (
+                                            <div className="grid grid-cols-2 gap-3">
+                                                <button
+                                                    onClick={() => window.open(`https://docs.google.com/document/d/${botConfig.google_doc_id}/edit`, '_blank')}
+                                                    className="flex justify-center items-center gap-2 px-3 py-2.5 bg-neutral-800 hover:bg-neutral-700 text-xs text-neutral-300 rounded-lg transition-colors border border-neutral-700"
+                                                >
+                                                    <FileText size={14} />
+                                                    Edit Doc
+                                                </button>
+                                                <button
+                                                    onClick={syncKnowledgeBase}
+                                                    disabled={syncing}
+                                                    className={`flex justify-center items-center gap-2 px-3 py-2.5 rounded-lg text-xs transition-all ${syncing ? "bg-purple-500/20 text-purple-300 cursor-not-allowed" : "bg-purple-600 hover:bg-purple-500 text-white"
+                                                        }`}
+                                                >
+                                                    <RefreshCw size={14} className={syncing ? "animate-spin" : ""} />
+                                                    {syncing ? "Syncing..." : "Sync Brain"}
+                                                </button>
+                                            </div>
+                                        ) : (
+                                            <p className="text-xs text-neutral-500 italic">Connect Google to generate your training document.</p>
+                                        )}
+                                    </div>
+                                </div>
+
+                                {/* WhatsApp Official Connection */}
+                                <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
+                                    <div className="flex justify-between items-center mb-4">
+                                        <h2 className="text-lg font-medium text-white flex items-center gap-2">
+                                            <Zap size={18} className="text-green-400" />
+                                            WhatsApp Connection
+                                        </h2>
+                                        <span className="px-2 py-0.5 bg-green-500/10 text-green-500 text-[10px] rounded border border-green-500/20 uppercase font-bold tracking-wider">Active</span>
+                                    </div>
+                                    <p className="text-sm text-neutral-400 mb-6">Your official number is connected via Meta Cloud API.</p>
+
+                                    <div className="p-4 bg-black rounded-xl border border-neutral-800 space-y-3">
+                                        <div className="flex justify-between items-center text-xs">
+                                            <span className="text-neutral-500">Phone Number ID</span>
+                                            <span className="text-neutral-300 font-mono">{botConfig.phone_number_id}</span>
+                                        </div>
+                                        <div className="flex justify-between items-center text-xs">
+                                            <span className="text-neutral-500">Status</span>
+                                            <span className="text-green-400 flex items-center gap-1">
+                                                <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
+                                                Live & Accepting Messages
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 {/* Bot Testing Info */}
