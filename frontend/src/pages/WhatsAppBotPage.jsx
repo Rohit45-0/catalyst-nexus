@@ -42,7 +42,6 @@ export default function WhatsAppBotPage() {
     const [setupData, setSetupData] = useState({
         use_case_type: "",
         business_display_name: "",
-        phone_number_id: "",
         owner_phone_number: "",
     });
     const [creating, setCreating] = useState(false);
@@ -99,7 +98,7 @@ export default function WhatsAppBotPage() {
             setCreating(true);
             const res = await axios.post(`${PLUGINS_API}/api/v1/whatsapp/bot-config`, {
                 user_id: user.id,
-                phone_number_id: setupData.phone_number_id,
+                phone_number_id: "auto",
                 owner_phone_number: setupData.owner_phone_number,
                 business_display_name: setupData.business_display_name,
                 use_case_type: setupData.use_case_type,
@@ -212,8 +211,8 @@ export default function WhatsAppBotPage() {
                             {[1, 2, 3].map(step => (
                                 <div key={step} className="flex-1 flex items-center gap-2">
                                     <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${setupStep >= step
-                                            ? "bg-purple-600 text-white shadow-lg shadow-purple-500/30"
-                                            : "bg-neutral-800 text-neutral-500"
+                                        ? "bg-purple-600 text-white shadow-lg shadow-purple-500/30"
+                                        : "bg-neutral-800 text-neutral-500"
                                         }`}>
                                         {setupStep > step ? <Check size={16} /> : step}
                                     </div>
@@ -264,8 +263,8 @@ export default function WhatsAppBotPage() {
                                         onClick={() => setSetupStep(2)}
                                         disabled={!setupData.use_case_type}
                                         className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all ${setupData.use_case_type
-                                                ? "bg-purple-600 hover:bg-purple-500 text-white shadow-lg shadow-purple-500/20"
-                                                : "bg-neutral-800 text-neutral-500 cursor-not-allowed"
+                                            ? "bg-purple-600 hover:bg-purple-500 text-white shadow-lg shadow-purple-500/20"
+                                            : "bg-neutral-800 text-neutral-500 cursor-not-allowed"
                                             }`}
                                     >
                                         Continue <ArrowRight size={16} />
@@ -298,20 +297,6 @@ export default function WhatsAppBotPage() {
 
                                     <div>
                                         <label className="text-xs text-neutral-400 uppercase font-semibold mb-2 flex items-center gap-2">
-                                            <MessageSquare size={14} /> WhatsApp Business Number ID
-                                        </label>
-                                        <input
-                                            type="text"
-                                            placeholder="e.g., 1025937603933608"
-                                            value={setupData.phone_number_id}
-                                            onChange={(e) => setSetupData({ ...setupData, phone_number_id: e.target.value })}
-                                            className="w-full bg-black border border-neutral-800 rounded-xl p-3.5 text-white placeholder-neutral-600 focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/20 outline-none transition-all"
-                                        />
-                                        <p className="text-[11px] text-neutral-600 mt-1.5">Found in Meta Business Suite → WhatsApp → Phone Numbers</p>
-                                    </div>
-
-                                    <div>
-                                        <label className="text-xs text-neutral-400 uppercase font-semibold mb-2 flex items-center gap-2">
                                             <Phone size={14} /> Your Personal Phone (for Admin Notifications)
                                         </label>
                                         <input
@@ -334,10 +319,10 @@ export default function WhatsAppBotPage() {
                                     </button>
                                     <button
                                         onClick={() => setSetupStep(3)}
-                                        disabled={!setupData.business_display_name || !setupData.phone_number_id}
-                                        className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all ${setupData.business_display_name && setupData.phone_number_id
-                                                ? "bg-purple-600 hover:bg-purple-500 text-white shadow-lg shadow-purple-500/20"
-                                                : "bg-neutral-800 text-neutral-500 cursor-not-allowed"
+                                        disabled={!setupData.business_display_name || !setupData.owner_phone_number}
+                                        className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all ${setupData.business_display_name && setupData.owner_phone_number
+                                            ? "bg-purple-600 hover:bg-purple-500 text-white shadow-lg shadow-purple-500/20"
+                                            : "bg-neutral-800 text-neutral-500 cursor-not-allowed"
                                             }`}
                                     >
                                         Review <ArrowRight size={16} />
@@ -363,14 +348,10 @@ export default function WhatsAppBotPage() {
                                         </div>
                                     </div>
 
-                                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                                    <div className="pt-4 border-t border-white/10">
                                         <div>
-                                            <p className="text-[10px] text-neutral-500 uppercase font-semibold mb-1">WhatsApp Number ID</p>
-                                            <p className="text-sm text-white font-mono">{setupData.phone_number_id}</p>
-                                        </div>
-                                        <div>
-                                            <p className="text-[10px] text-neutral-500 uppercase font-semibold mb-1">Owner Phone</p>
-                                            <p className="text-sm text-white font-mono">{setupData.owner_phone_number || "Not set"}</p>
+                                            <p className="text-[10px] text-neutral-500 uppercase font-semibold mb-1">Admin Notification Phone</p>
+                                            <p className="text-sm text-white font-mono">{setupData.owner_phone_number}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -404,8 +385,8 @@ export default function WhatsAppBotPage() {
                                         onClick={createBotFromWizard}
                                         disabled={creating}
                                         className={`flex items-center gap-2 px-8 py-3.5 rounded-xl font-bold text-base transition-all ${creating
-                                                ? "bg-purple-500/30 text-purple-300 cursor-not-allowed"
-                                                : "bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 text-white shadow-xl shadow-purple-500/30"
+                                            ? "bg-purple-500/30 text-purple-300 cursor-not-allowed"
+                                            : "bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 text-white shadow-xl shadow-purple-500/30"
                                             }`}
                                     >
                                         {creating ? (
