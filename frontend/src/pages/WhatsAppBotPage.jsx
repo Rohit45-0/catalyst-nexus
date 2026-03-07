@@ -1,9 +1,19 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { getCurrentUser, getAccessToken } from "../services/auth";
-import { Copy, Check, Clock, Calendar, CheckSquare, BarChart, TrendingUp, Sparkles, Store, Scissors, UtensilsCrossed, ShoppingCart, GraduationCap, Globe, BookOpen, RefreshCw, FileText, Zap } from "lucide-react";
+import { Copy, Check, Clock, Calendar, CheckSquare, BarChart, TrendingUp, Sparkles, Store, Scissors, UtensilsCrossed, ShoppingCart, GraduationCap, Globe, BookOpen, RefreshCw, FileText, Zap, ArrowRight, ArrowLeft, Phone, Building2, MessageSquare, Stethoscope } from "lucide-react";
 
 const PLUGINS_API = import.meta.env.VITE_PLUGINS_API_URL || "https://web-production-ba9e.up.railway.app";
+
+const useCaseOptions = [
+    { key: "restaurant", label: "Restaurant / Mess", desc: "Table bookings, menu enquiries, order updates", icon: UtensilsCrossed, color: "text-orange-400", border: "border-orange-500/30", bg: "bg-orange-500/10", gradient: "from-orange-500/20 to-orange-600/5" },
+    { key: "salon", label: "Salon / Parlour", desc: "Appointment scheduling, service menu, reminders", icon: Scissors, color: "text-pink-400", border: "border-pink-500/30", bg: "bg-pink-500/10", gradient: "from-pink-500/20 to-pink-600/5" },
+    { key: "dentist", label: "Dentist / Clinic", desc: "Patient appointments, treatment info, follow-ups", icon: Stethoscope, color: "text-cyan-400", border: "border-cyan-500/30", bg: "bg-cyan-500/10", gradient: "from-cyan-500/20 to-cyan-600/5" },
+    { key: "tiffin", label: "Tiffin / Meals", desc: "Meal subscriptions, daily menu, delivery updates", icon: Store, color: "text-green-400", border: "border-green-500/30", bg: "bg-green-500/10", gradient: "from-green-500/20 to-green-600/5" },
+    { key: "kirana", label: "Kirana / Grocery", desc: "Order placement, stock enquiries, delivery tracking", icon: ShoppingCart, color: "text-blue-400", border: "border-blue-500/30", bg: "bg-blue-500/10", gradient: "from-blue-500/20 to-blue-600/5" },
+    { key: "coaching", label: "Coaching / Tuition", desc: "Class schedules, doubt solving, fee reminders", icon: GraduationCap, color: "text-yellow-400", border: "border-yellow-500/30", bg: "bg-yellow-500/10", gradient: "from-yellow-500/20 to-yellow-600/5" },
+    { key: "general", label: "General Business", desc: "Flexible AI assistant for any business type", icon: Globe, color: "text-neutral-400", border: "border-neutral-500/30", bg: "bg-neutral-500/10", gradient: "from-neutral-500/20 to-neutral-600/5" },
+];
 
 export default function WhatsAppBotPage() {
     const [botConfig, setBotConfig] = useState(null);
@@ -26,6 +36,16 @@ export default function WhatsAppBotPage() {
     const [syncing, setSyncing] = useState(false);
     const [loading, setLoading] = useState(true);
     const [user, setUser] = useState(null);
+
+    // --- Setup Wizard State ---
+    const [setupStep, setSetupStep] = useState(1); // 1=Business Type, 2=Details, 3=Review & Create
+    const [setupData, setSetupData] = useState({
+        use_case_type: "",
+        business_display_name: "",
+        phone_number_id: "",
+        owner_phone_number: "",
+    });
+    const [creating, setCreating] = useState(false);
 
     const loadBotConfig = async (currentUser) => {
         try {
@@ -56,7 +76,7 @@ export default function WhatsAppBotPage() {
                 setAnalytics(res.data.data);
             }
         } catch (err) {
-            console.error("Failed to load analytics", err);
+            console.error("Analytics unavailable", err);
         }
     };
 
@@ -73,15 +93,16 @@ export default function WhatsAppBotPage() {
         }
     };
 
-    const createBot = async () => {
+    // --- New: Wizard Submit ---
+    const createBotFromWizard = async () => {
         try {
-            setLoading(true);
+            setCreating(true);
             const res = await axios.post(`${PLUGINS_API}/api/v1/whatsapp/bot-config`, {
                 user_id: user.id,
-                phone_number_id: "1025937603933608", // Meta Test Number ID for now
-                owner_phone_number: "",
-                business_display_name: "My Business",
-                use_case_type: "restaurant"
+                phone_number_id: setupData.phone_number_id,
+                owner_phone_number: setupData.owner_phone_number,
+                business_display_name: setupData.business_display_name,
+                use_case_type: setupData.use_case_type,
             }, {
                 headers: { 'Authorization': `Bearer ${getAccessToken()}` }
             });
@@ -89,9 +110,9 @@ export default function WhatsAppBotPage() {
             loadSlotsConfig(res.data.data.id);
         } catch (err) {
             console.error(err);
-            alert("Failed to create bot.");
+            alert("Failed to create bot. Please check your details and try again.");
         } finally {
-            setLoading(false);
+            setCreating(false);
         }
     };
 
@@ -125,15 +146,6 @@ export default function WhatsAppBotPage() {
             setSyncing(false);
         }
     };
-
-    const useCaseOptions = [
-        { key: "restaurant", label: "Restaurant / Mess", icon: UtensilsCrossed, color: "text-orange-400", border: "border-orange-500/30", bg: "bg-orange-500/10" },
-        { key: "salon", label: "Salon / Parlour", icon: Scissors, color: "text-pink-400", border: "border-pink-500/30", bg: "bg-pink-500/10" },
-        { key: "tiffin", label: "Tiffin / Meals", icon: Store, color: "text-green-400", border: "border-green-500/30", bg: "bg-green-500/10" },
-        { key: "kirana", label: "Kirana / Grocery", icon: ShoppingCart, color: "text-blue-400", border: "border-blue-500/30", bg: "bg-blue-500/10" },
-        { key: "coaching", label: "Coaching / Tuition", icon: GraduationCap, color: "text-yellow-400", border: "border-yellow-500/30", bg: "bg-yellow-500/10" },
-        { key: "general", label: "General Business", icon: Globe, color: "text-neutral-400", border: "border-neutral-500/30", bg: "bg-neutral-500/10" },
-    ];
 
     const updateUseCase = async (newUseCase) => {
         // Optimistic UI Update: change it visually instantly!
@@ -169,7 +181,17 @@ export default function WhatsAppBotPage() {
         });
     }, []);
 
-    if (loading) return <div className="p-8 text-neutral-400">Loading...</div>;
+    if (loading) return (
+        <div className="flex-1 flex items-center justify-center bg-black">
+            <div className="text-center">
+                <div className="w-8 h-8 border-2 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+                <p className="text-neutral-400">Loading your dashboard...</p>
+            </div>
+        </div>
+    );
+
+    // --- Helper: find selected use case option ---
+    const selectedOpt = useCaseOptions.find(o => o.key === setupData.use_case_type);
 
     return (
         <div className="flex-1 overflow-auto bg-black p-8">
@@ -182,15 +204,225 @@ export default function WhatsAppBotPage() {
                 </div>
 
                 {!botConfig ? (
-                    <div className="bg-neutral-900/50 border border-neutral-800 rounded-2xl p-8 text-center">
-                        <h2 className="text-xl font-medium text-white mb-4">You don't have a bot yet</h2>
-                        <p className="text-neutral-400 mb-6">Create your dedicated WhatsApp AI to start automating bookings and customer service.</p>
-                        <button
-                            onClick={createBot}
-                            className="px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-neutral-200 transition-colors"
-                        >
-                            Initialize My WhatsApp Bot
-                        </button>
+                    /* ============ ONBOARDING WIZARD ============ */
+                    <div className="max-w-2xl mx-auto">
+
+                        {/* Progress Bar */}
+                        <div className="flex items-center gap-2 mb-8">
+                            {[1, 2, 3].map(step => (
+                                <div key={step} className="flex-1 flex items-center gap-2">
+                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${setupStep >= step
+                                            ? "bg-purple-600 text-white shadow-lg shadow-purple-500/30"
+                                            : "bg-neutral-800 text-neutral-500"
+                                        }`}>
+                                        {setupStep > step ? <Check size={16} /> : step}
+                                    </div>
+                                    {step < 3 && (
+                                        <div className={`flex-1 h-0.5 rounded transition-all duration-500 ${setupStep > step ? "bg-purple-600" : "bg-neutral-800"
+                                            }`} />
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Step 1: Choose Business Type */}
+                        {setupStep === 1 && (
+                            <div className="space-y-6 animate-in fade-in">
+                                <div className="text-center mb-8">
+                                    <h2 className="text-2xl font-medium text-white mb-2">What kind of business do you run?</h2>
+                                    <p className="text-neutral-400">This determines how your AI talks to customers and what features are enabled.</p>
+                                </div>
+
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    {useCaseOptions.map(opt => {
+                                        const Icon = opt.icon;
+                                        const isActive = setupData.use_case_type === opt.key;
+                                        return (
+                                            <button
+                                                key={opt.key}
+                                                onClick={() => setSetupData({ ...setupData, use_case_type: opt.key })}
+                                                className={`flex items-start gap-4 p-5 rounded-2xl border transition-all duration-200 text-left group ${isActive
+                                                    ? `${opt.bg} ${opt.border} ring-1 ring-white/10`
+                                                    : "bg-neutral-900 border-neutral-800 hover:border-neutral-600 hover:bg-neutral-900/80"
+                                                    }`}
+                                            >
+                                                <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${isActive ? opt.bg : "bg-neutral-800"} transition-colors`}>
+                                                    <Icon size={22} className={isActive ? opt.color : "text-neutral-500 group-hover:text-neutral-300"} />
+                                                </div>
+                                                <div className="flex-1 min-w-0">
+                                                    <p className={`text-sm font-semibold ${isActive ? "text-white" : "text-neutral-300"}`}>{opt.label}</p>
+                                                    <p className={`text-xs mt-0.5 ${isActive ? "text-neutral-300" : "text-neutral-500"}`}>{opt.desc}</p>
+                                                </div>
+                                                {isActive && <Check size={18} className="text-purple-400 mt-1 flex-shrink-0" />}
+                                            </button>
+                                        );
+                                    })}
+                                </div>
+
+                                <div className="flex justify-end pt-4">
+                                    <button
+                                        onClick={() => setSetupStep(2)}
+                                        disabled={!setupData.use_case_type}
+                                        className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all ${setupData.use_case_type
+                                                ? "bg-purple-600 hover:bg-purple-500 text-white shadow-lg shadow-purple-500/20"
+                                                : "bg-neutral-800 text-neutral-500 cursor-not-allowed"
+                                            }`}
+                                    >
+                                        Continue <ArrowRight size={16} />
+                                    </button>
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Step 2: Business Details */}
+                        {setupStep === 2 && (
+                            <div className="space-y-6 animate-in fade-in">
+                                <div className="text-center mb-8">
+                                    <h2 className="text-2xl font-medium text-white mb-2">Tell us about your business</h2>
+                                    <p className="text-neutral-400">This information helps personalize the AI and route messages properly.</p>
+                                </div>
+
+                                <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 space-y-5">
+                                    <div>
+                                        <label className="text-xs text-neutral-400 uppercase font-semibold mb-2 flex items-center gap-2">
+                                            <Building2 size={14} /> Business Name
+                                        </label>
+                                        <input
+                                            type="text"
+                                            placeholder="e.g., Smile Dental Clinic"
+                                            value={setupData.business_display_name}
+                                            onChange={(e) => setSetupData({ ...setupData, business_display_name: e.target.value })}
+                                            className="w-full bg-black border border-neutral-800 rounded-xl p-3.5 text-white placeholder-neutral-600 focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/20 outline-none transition-all"
+                                        />
+                                    </div>
+
+                                    <div>
+                                        <label className="text-xs text-neutral-400 uppercase font-semibold mb-2 flex items-center gap-2">
+                                            <MessageSquare size={14} /> WhatsApp Business Number ID
+                                        </label>
+                                        <input
+                                            type="text"
+                                            placeholder="e.g., 1025937603933608"
+                                            value={setupData.phone_number_id}
+                                            onChange={(e) => setSetupData({ ...setupData, phone_number_id: e.target.value })}
+                                            className="w-full bg-black border border-neutral-800 rounded-xl p-3.5 text-white placeholder-neutral-600 focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/20 outline-none transition-all"
+                                        />
+                                        <p className="text-[11px] text-neutral-600 mt-1.5">Found in Meta Business Suite → WhatsApp → Phone Numbers</p>
+                                    </div>
+
+                                    <div>
+                                        <label className="text-xs text-neutral-400 uppercase font-semibold mb-2 flex items-center gap-2">
+                                            <Phone size={14} /> Your Personal Phone (for Admin Notifications)
+                                        </label>
+                                        <input
+                                            type="text"
+                                            placeholder="e.g., 919325341766"
+                                            value={setupData.owner_phone_number}
+                                            onChange={(e) => setSetupData({ ...setupData, owner_phone_number: e.target.value })}
+                                            className="w-full bg-black border border-neutral-800 rounded-xl p-3.5 text-white placeholder-neutral-600 focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/20 outline-none transition-all"
+                                        />
+                                        <p className="text-[11px] text-neutral-600 mt-1.5">Country code + number (no spaces or +). You'll get escalation alerts here.</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex justify-between pt-4">
+                                    <button
+                                        onClick={() => setSetupStep(1)}
+                                        className="flex items-center gap-2 px-5 py-3 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-300 hover:bg-neutral-800 transition-colors"
+                                    >
+                                        <ArrowLeft size={16} /> Back
+                                    </button>
+                                    <button
+                                        onClick={() => setSetupStep(3)}
+                                        disabled={!setupData.business_display_name || !setupData.phone_number_id}
+                                        className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all ${setupData.business_display_name && setupData.phone_number_id
+                                                ? "bg-purple-600 hover:bg-purple-500 text-white shadow-lg shadow-purple-500/20"
+                                                : "bg-neutral-800 text-neutral-500 cursor-not-allowed"
+                                            }`}
+                                    >
+                                        Review <ArrowRight size={16} />
+                                    </button>
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Step 3: Review & Launch */}
+                        {setupStep === 3 && selectedOpt && (
+                            <div className="space-y-6 animate-in fade-in">
+                                <div className="text-center mb-8">
+                                    <h2 className="text-2xl font-medium text-white mb-2">Review & Launch Your Bot</h2>
+                                    <p className="text-neutral-400">Everything looks good? Hit launch and your AI assistant goes live!</p>
+                                </div>
+
+                                <div className={`bg-gradient-to-br ${selectedOpt.gradient} border ${selectedOpt.border} rounded-2xl p-6 space-y-4`}>
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <selectedOpt.icon size={28} className={selectedOpt.color} />
+                                        <div>
+                                            <p className="text-lg font-semibold text-white">{setupData.business_display_name}</p>
+                                            <p className="text-sm text-neutral-400">{selectedOpt.label} Bot</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                                        <div>
+                                            <p className="text-[10px] text-neutral-500 uppercase font-semibold mb-1">WhatsApp Number ID</p>
+                                            <p className="text-sm text-white font-mono">{setupData.phone_number_id}</p>
+                                        </div>
+                                        <div>
+                                            <p className="text-[10px] text-neutral-500 uppercase font-semibold mb-1">Owner Phone</p>
+                                            <p className="text-sm text-white font-mono">{setupData.owner_phone_number || "Not set"}</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* What Happens Next */}
+                                <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
+                                    <h3 className="text-sm font-semibold text-white mb-4">What happens after launch?</h3>
+                                    <div className="space-y-3">
+                                        {[
+                                            { icon: Zap, text: "Your AI bot starts listening on WhatsApp instantly", color: "text-green-400" },
+                                            { icon: Calendar, text: "Connect Google to sync Calendar, Docs & Drive (next step)", color: "text-blue-400" },
+                                            { icon: BookOpen, text: "A Knowledge Base doc is auto-created for training your AI", color: "text-purple-400" },
+                                            { icon: MessageSquare, text: "Customers message your WhatsApp → AI replies automatically", color: "text-orange-400" },
+                                        ].map((item, i) => (
+                                            <div key={i} className="flex items-center gap-3 text-sm text-neutral-300">
+                                                <item.icon size={16} className={item.color} />
+                                                {item.text}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="flex justify-between pt-4">
+                                    <button
+                                        onClick={() => setSetupStep(2)}
+                                        className="flex items-center gap-2 px-5 py-3 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-300 hover:bg-neutral-800 transition-colors"
+                                    >
+                                        <ArrowLeft size={16} /> Back
+                                    </button>
+                                    <button
+                                        onClick={createBotFromWizard}
+                                        disabled={creating}
+                                        className={`flex items-center gap-2 px-8 py-3.5 rounded-xl font-bold text-base transition-all ${creating
+                                                ? "bg-purple-500/30 text-purple-300 cursor-not-allowed"
+                                                : "bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 text-white shadow-xl shadow-purple-500/30"
+                                            }`}
+                                    >
+                                        {creating ? (
+                                            <>
+                                                <div className="w-4 h-4 border-2 border-purple-300 border-t-transparent rounded-full animate-spin" />
+                                                Creating...
+                                            </>
+                                        ) : (
+                                            <>
+                                                <Zap size={18} />
+                                                Launch My AI Bot
+                                            </>
+                                        )}
+                                    </button>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 ) : (
                     <div className="space-y-6">
