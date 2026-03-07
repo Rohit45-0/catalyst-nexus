@@ -24,6 +24,7 @@ export default function WhatsAppBotPage() {
     const [analytics, setAnalytics] = useState(null);
     const [hasCopied, setHasCopied] = useState(false);
     const [syncing, setSyncing] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [user, setUser] = useState(null);
 
     const loadBotConfig = async (currentUser) => {
