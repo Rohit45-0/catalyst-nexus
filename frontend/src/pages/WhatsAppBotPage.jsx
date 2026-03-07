@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { getCurrentUser } from "../services/auth";
+import { getCurrentUser, getAccessToken } from "../services/auth";
 import { Copy, Check, Clock, Calendar, CheckSquare, BarChart, TrendingUp, Sparkles, Store, Scissors, UtensilsCrossed, ShoppingCart, GraduationCap, Globe, BookOpen, RefreshCw, FileText, Zap } from "lucide-react";
 
 const PLUGINS_API = import.meta.env.VITE_PLUGINS_API_URL || "https://web-production-ba9e.up.railway.app";
@@ -30,7 +30,10 @@ export default function WhatsAppBotPage() {
     const loadBotConfig = async (currentUser) => {
         try {
             const res = await axios.get(`${PLUGINS_API}/api/v1/whatsapp/bot-config`, {
-                headers: { 'user-id': currentUser.id }
+                headers: {
+                    'user-id': currentUser.id,
+                    'Authorization': `Bearer ${getAccessToken()}`
+                }
             });
             if (res.data.data) {
                 setBotConfig(res.data.data);
@@ -46,7 +49,9 @@ export default function WhatsAppBotPage() {
 
     const loadAnalytics = async (botId, userId) => {
         try {
-            const res = await axios.get(`${PLUGINS_API}/api/v1/dashboard/analytics?bot_config_id=${botId}&user_id=${userId}`);
+            const res = await axios.get(`${PLUGINS_API}/api/v1/dashboard/analytics?bot_config_id=${botId}&user_id=${userId}`, {
+                headers: { 'Authorization': `Bearer ${getAccessToken()}` }
+            });
             if (res.data.data) {
                 setAnalytics(res.data.data);
             }
@@ -57,7 +62,9 @@ export default function WhatsAppBotPage() {
 
     const loadSlotsConfig = async (botId) => {
         try {
-            const res = await axios.get(`${PLUGINS_API}/api/v1/slots/config/${botId}`);
+            const res = await axios.get(`${PLUGINS_API}/api/v1/slots/config/${botId}`, {
+                headers: { 'Authorization': `Bearer ${getAccessToken()}` }
+            });
             if (res.data.data) {
                 setSlots(res.data.data);
             }
@@ -75,6 +82,8 @@ export default function WhatsAppBotPage() {
                 owner_phone_number: "",
                 business_display_name: "My Business",
                 use_case_type: "restaurant"
+            }, {
+                headers: { 'Authorization': `Bearer ${getAccessToken()}` }
             });
             setBotConfig(res.data.data);
             loadSlotsConfig(res.data.data.id);
@@ -92,6 +101,8 @@ export default function WhatsAppBotPage() {
                 user_id: user.id,
                 bot_config_id: botConfig.id,
                 ...slots
+            }, {
+                headers: { 'Authorization': `Bearer ${getAccessToken()}` }
             });
             alert("Working hours saved!");
         } catch (err) {
@@ -103,7 +114,9 @@ export default function WhatsAppBotPage() {
     const syncKnowledgeBase = async () => {
         try {
             setSyncing(true);
-            const res = await axios.post(`${PLUGINS_API}/api/v1/knowledge/sync/${botConfig.id}`);
+            const res = await axios.post(`${PLUGINS_API}/api/v1/knowledge/sync/${botConfig.id}`, {}, {
+                headers: { 'Authorization': `Bearer ${getAccessToken()}` }
+            });
             alert(res.data.message || "Sync successful!");
         } catch (err) {
             console.error(err);
@@ -135,6 +148,8 @@ export default function WhatsAppBotPage() {
                 business_display_name: botConfig.business_display_name || "My Business",
                 use_case_type: newUseCase,
                 is_active: true,
+            }, {
+                headers: { 'Authorization': `Bearer ${getAccessToken()}` }
             });
         } catch (err) {
             console.error(err);
