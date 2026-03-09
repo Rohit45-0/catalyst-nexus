@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { getCurrentUser, getAccessToken } from "../services/auth";
-import { Copy, Check, Clock, Calendar, CheckSquare, BarChart, TrendingUp, Sparkles, Store, Scissors, UtensilsCrossed, ShoppingCart, GraduationCap, Globe, BookOpen, RefreshCw, FileText, Zap, ArrowRight, ArrowLeft, Phone, Building2, MessageSquare, Stethoscope } from "lucide-react";
+import { Copy, Check, Clock, Calendar, CheckSquare, BarChart, TrendingUp, Sparkles, Store, Scissors, UtensilsCrossed, ShoppingCart, GraduationCap, Globe, BookOpen, RefreshCw, FileText, Zap, ArrowRight, ArrowLeft, Phone, Building2, MessageSquare, Stethoscope, QrCode } from "lucide-react";
+import { QRCodeSVG } from "qrcode.react";
 
 const PLUGINS_API = import.meta.env.VITE_PLUGINS_API_URL || "https://web-production-ba9e.up.railway.app";
 
@@ -572,29 +573,48 @@ export default function WhatsAppBotPage() {
                                     </div>
                                 </div>
 
-                                {/* Bot Testing Info */}
+                                {/* Share / Test Bot */}
                                 <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
-                                    <h2 className="text-lg font-medium text-white mb-4">Test Your Bot</h2>
-                                    <div className="space-y-4">
-                                        <div>
-                                            <label className="text-xs text-neutral-500 uppercase tracking-wider font-semibold mb-2 block">WhatsApp Sandbox Number</label>
+                                    <div className="flex items-center gap-2 mb-4">
+                                        <QrCode size={18} className="text-white" />
+                                        <h2 className="text-lg font-medium text-white">Share Your Bot</h2>
+                                    </div>
+                                    <p className="text-sm text-neutral-400 mb-6">
+                                        Show this QR code to your clients on their visits, so they can scan it to instantly message your AI for their next booking or query.
+                                    </p>
+
+                                    <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-stretch">
+                                        {/* QR Code */}
+                                        <div className="bg-white p-3 rounded-xl shadow-sm shrink-0">
+                                            <QRCodeSVG
+                                                value="https://wa.me/15550871974?text=Hi! I would like to book an appointment."
+                                                size={120}
+                                                bgColor={"#ffffff"}
+                                                fgColor={"#000000"}
+                                                level={"Q"}
+                                            />
+                                        </div>
+
+                                        {/* Number Copier */}
+                                        <div className="flex-1 flex flex-col justify-center space-y-3 w-full">
+                                            <label className="text-xs text-neutral-500 uppercase tracking-wider font-semibold">Or share Direct Number</label>
                                             <div className="flex bg-black border border-neutral-800 rounded-lg p-3 justify-between items-center group">
-                                                <code className="text-neutral-300 font-mono text-sm">+1 555 087 1974</code>
+                                                <code className="text-neutral-300 font-mono text-sm sm:text-base">+1 555 087 1974</code>
                                                 <button
                                                     onClick={() => {
                                                         navigator.clipboard.writeText("+15550871974");
                                                         setHasCopied(true);
                                                         setTimeout(() => setHasCopied(false), 2000);
                                                     }}
-                                                    className="text-neutral-500 hover:text-white transition-colors"
+                                                    className="text-neutral-500 hover:text-white transition-colors p-1"
                                                 >
-                                                    {hasCopied ? <Check size={16} className="text-green-500" /> : <Copy size={16} />}
+                                                    {hasCopied ? <Check size={18} className="text-green-500" /> : <Copy size={18} />}
                                                 </button>
                                             </div>
+                                            <p className="text-[11px] text-neutral-500">
+                                                Test it yourself: Message this number to talk to your AI.
+                                            </p>
                                         </div>
-                                        <p className="text-sm text-neutral-400">
-                                            Message this number from your personal phone to text your AI.
-                                        </p>
                                     </div>
                                 </div>
 
