@@ -131,17 +131,20 @@ export default function WhatsAppBotPage() {
 
     const saveSlotConfig = async () => {
         try {
-            await axios.post(`${PLUGINS_API}/api/v1/slots/config`, {
+            const payload = {
                 user_id: user.id,
                 bot_config_id: botConfig.id,
-                ...slots
-            }, {
+                working_hours: slots.working_hours,
+                slot_duration_minutes: parseInt(slots.slot_duration_minutes) || 15,
+                max_capacity_per_slot: parseInt(slots.max_capacity_per_slot) || 1
+            };
+            await axios.post(`${PLUGINS_API}/api/v1/slots/config`, payload, {
                 headers: { 'Authorization': `Bearer ${getAccessToken()}` }
             });
             alert("Working hours saved!");
         } catch (err) {
             console.error(err);
-            alert("Failed to save rules.");
+            alert("Failed to save rules. Please check your network connection and try again.");
         }
     };
 
@@ -692,19 +695,62 @@ export default function WhatsAppBotPage() {
                                     <div className="pt-4 border-t border-neutral-800">
                                         <label className="text-xs text-neutral-500 uppercase font-semibold mb-3 block">Weekly Schedule</label>
 
-                                        {Object.keys(slots.working_hours).map(day => (
-                                            <div key={day} className="flex items-center justify-between mb-2">
-                                                <span className="text-sm text-neutral-300 capitalize w-24">{day}</span>
-                                                {slots.working_hours[day].length > 0 ? (
-                                                    <span className="text-sm font-mono text-neutral-400">
-                                                        {slots.working_hours[day].map(b => `${b.start}-${b.end}`).join(", ")}
-                                                    </span>
-                                                ) : (
-                                                    <span className="text-sm text-neutral-600 italic">Closed</span>
-                                                )}
-                                            </div>
-                                        ))}
-                                        <p className="mt-4 text-xs text-neutral-500">Note: Advanced UI editor for multiple blocks (e.g., Lunch breaks) coming soon.</p>
+                                        {Object.keys(slots.working_hours).map(day => {
+                                            const isActive = slots.working_hours[day].length > 0;
+                                            const start = isActive ? slots.working_hours[day][0].start : "";
+                                            const end = isActive ? slots.working_hours[day][0].end : "";
+
+                                            return (
+                                                <div key={day} className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 sm:mb-2 bg-neutral-800/30 p-2 rounded-lg border border-neutral-800">
+                                                    <div className="flex justify-between items-center sm:w-28">
+                                                        <span className={`text-sm capitalize font-medium ${isActive ? "text-neutral-200" : "text-neutral-500"}`}>{day}</span>
+                                                        <button
+                                                            onClick={() => {
+                                                                const newHours = { ...slots.working_hours };
+                                                                newHours[day] = isActive ? [] : [{ start: "09:00", end: "17:00" }];
+                                                                setSlots({ ...slots, working_hours: newHours });
+                                                            }}
+                                                            className={`text-[10px] px-2 py-1 rounded transition-colors ${isActive ? "bg-red-500/20 text-red-400 hover:bg-red-500/30" : "bg-green-500/20 text-green-400 hover:bg-green-500/30"}`}
+                                                        >
+                                                            {isActive ? "Close" : "Open"}
+                                                        </button>
+                                                    </div>
+
+                                                    {isActive ? (
+                                                        <div className="flex items-center gap-2 flex-1 relative mt-1 sm:mt-0">
+                                                            <input
+                                                                type="time"
+                                                                value={start}
+                                                                onChange={(e) => {
+                                                                    const val = e.target.value;
+                                                                    const newHours = { ...slots.working_hours };
+                                                                    newHours[day] = [{ start: val, end: end }];
+                                                                    setSlots({ ...slots, working_hours: newHours });
+                                                                }}
+                                                                className="w-full bg-black border border-neutral-700/50 hover:border-neutral-600 focus:border-neutral-500 rounded-md p-1.5 text-white text-xs text-center outline-none transition-colors"
+                                                            />
+                                                            <span className="text-neutral-600 text-xs">to</span>
+                                                            <input
+                                                                type="time"
+                                                                value={end}
+                                                                onChange={(e) => {
+                                                                    const val = e.target.value;
+                                                                    const newHours = { ...slots.working_hours };
+                                                                    newHours[day] = [{ start: start, end: val }];
+                                                                    setSlots({ ...slots, working_hours: newHours });
+                                                                }}
+                                                                className="w-full bg-black border border-neutral-700/50 hover:border-neutral-600 focus:border-neutral-500 rounded-md p-1.5 text-white text-xs text-center outline-none transition-colors"
+                                                            />
+                                                        </div>
+                                                    ) : (
+                                                        <div className="flex-1 flex justify-center py-1.5 mt-1 sm:mt-0">
+                                                            <span className="text-xs text-neutral-600 italic">Day off</span>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            );
+                                        })}
+                                        <p className="mt-4 text-[11px] text-neutral-500 text-center">Set your daily hours here. You must hit "Save Configuration" at the bottom to apply changes.</p>
                                     </div>
                                 </div>
 
