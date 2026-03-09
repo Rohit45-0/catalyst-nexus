@@ -44,6 +44,7 @@ export default function WhatsAppBotPage() {
         use_case_type: "",
         business_display_name: "",
         owner_phone_number: "",
+        whatsapp_phone_number: "",
     });
     const [creating, setCreating] = useState(false);
 
@@ -101,6 +102,7 @@ export default function WhatsAppBotPage() {
                 user_id: user.id,
                 phone_number_id: "auto",
                 owner_phone_number: setupData.owner_phone_number,
+                whatsapp_phone_number: setupData.whatsapp_phone_number,
                 business_display_name: setupData.business_display_name,
                 use_case_type: setupData.use_case_type,
             }, {
@@ -309,6 +311,19 @@ export default function WhatsAppBotPage() {
                                         />
                                         <p className="text-[11px] text-neutral-600 mt-1.5">Country code + number (no spaces or +). You'll get escalation alerts here.</p>
                                     </div>
+                                    <div>
+                                        <label className="text-xs text-neutral-400 uppercase font-semibold mb-2 flex items-center gap-2">
+                                            <Phone size={14} /> WhatsApp Number for Bot
+                                        </label>
+                                        <input
+                                            type="text"
+                                            placeholder="e.g., 919876543210"
+                                            value={setupData.whatsapp_phone_number}
+                                            onChange={(e) => setSetupData({ ...setupData, whatsapp_phone_number: e.target.value })}
+                                            className="w-full bg-black border border-neutral-800 rounded-xl p-3.5 text-white placeholder-neutral-600 focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/20 outline-none transition-all"
+                                        />
+                                        <p className="text-[11px] text-neutral-600 mt-1.5">Your official business WhatsApp number (with country code).</p>
+                                    </div>
                                 </div>
 
                                 <div className="flex justify-between pt-4">
@@ -320,8 +335,8 @@ export default function WhatsAppBotPage() {
                                     </button>
                                     <button
                                         onClick={() => setSetupStep(3)}
-                                        disabled={!setupData.business_display_name || !setupData.owner_phone_number}
-                                        className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all ${setupData.business_display_name && setupData.owner_phone_number
+                                        disabled={!setupData.business_display_name || !setupData.owner_phone_number || !setupData.whatsapp_phone_number}
+                                        className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all ${setupData.business_display_name && setupData.owner_phone_number && setupData.whatsapp_phone_number
                                             ? "bg-purple-600 hover:bg-purple-500 text-white shadow-lg shadow-purple-500/20"
                                             : "bg-neutral-800 text-neutral-500 cursor-not-allowed"
                                             }`}
@@ -353,6 +368,10 @@ export default function WhatsAppBotPage() {
                                         <div>
                                             <p className="text-[10px] text-neutral-500 uppercase font-semibold mb-1">Admin Notification Phone</p>
                                             <p className="text-sm text-white font-mono">{setupData.owner_phone_number}</p>
+                                        </div>
+                                        <div className="mt-2">
+                                            <p className="text-[10px] text-neutral-500 uppercase font-semibold mb-1">Bot WhatsApp Number</p>
+                                            <p className="text-sm text-white font-mono">{setupData.whatsapp_phone_number}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -587,7 +606,7 @@ export default function WhatsAppBotPage() {
                                         {/* QR Code */}
                                         <div className="bg-white p-3 rounded-xl shadow-sm shrink-0">
                                             <QRCodeSVG
-                                                value="https://wa.me/15550871974?text=Hi! I would like to book an appointment."
+                                                value={`https://wa.me/${botConfig.whatsapp_phone_number}?text=Hi! I would like to book an appointment.`}
                                                 size={120}
                                                 bgColor={"#ffffff"}
                                                 fgColor={"#000000"}
@@ -599,10 +618,10 @@ export default function WhatsAppBotPage() {
                                         <div className="flex-1 flex flex-col justify-center space-y-3 w-full">
                                             <label className="text-xs text-neutral-500 uppercase tracking-wider font-semibold">Or share Direct Number</label>
                                             <div className="flex bg-black border border-neutral-800 rounded-lg p-3 justify-between items-center group">
-                                                <code className="text-neutral-300 font-mono text-sm sm:text-base">+1 555 087 1974</code>
+                                                <code className="text-neutral-300 font-mono text-sm sm:text-base">+{botConfig.whatsapp_phone_number}</code>
                                                 <button
                                                     onClick={() => {
-                                                        navigator.clipboard.writeText("+15550871974");
+                                                        navigator.clipboard.writeText(`+${botConfig.whatsapp_phone_number}`);
                                                         setHasCopied(true);
                                                         setTimeout(() => setHasCopied(false), 2000);
                                                     }}
