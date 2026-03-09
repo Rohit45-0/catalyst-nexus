@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { getCurrentUser, getAccessToken } from "../services/auth";
-import { Copy, Check, Clock, Calendar, CheckSquare, BarChart, TrendingUp, Sparkles, Store, Scissors, UtensilsCrossed, ShoppingCart, GraduationCap, Globe, BookOpen, RefreshCw, FileText, Zap, ArrowRight, ArrowLeft, Phone, Building2, MessageSquare, Stethoscope, QrCode } from "lucide-react";
+import { Copy, Check, Clock, Calendar, CheckSquare, BarChart, TrendingUp, Sparkles, Store, Scissors, UtensilsCrossed, ShoppingCart, GraduationCap, Globe, BookOpen, RefreshCw, FileText, Zap, ArrowRight, ArrowLeft, Phone, Building2, MessageSquare, Stethoscope, QrCode, Settings } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
 
 const PLUGINS_API = import.meta.env.VITE_PLUGINS_API_URL || "https://web-production-ba9e.up.railway.app";
@@ -116,6 +116,17 @@ export default function WhatsAppBotPage() {
         } finally {
             setCreating(false);
         }
+    };
+
+    const startReconfigure = () => {
+        setSetupData({
+            use_case_type: botConfig?.use_case_type || "",
+            business_display_name: botConfig?.business_display_name || "",
+            owner_phone_number: botConfig?.owner_phone_number || "",
+            whatsapp_phone_number: botConfig?.whatsapp_phone_number || "",
+        });
+        setSetupStep(1);
+        setBotConfig(null);
     };
 
     const saveSlotConfig = async () => {
@@ -573,7 +584,16 @@ export default function WhatsAppBotPage() {
                                             <Zap size={18} className="text-green-400" />
                                             WhatsApp Connection
                                         </h2>
-                                        <span className="px-2 py-0.5 bg-green-500/10 text-green-500 text-[10px] rounded border border-green-500/20 uppercase font-bold tracking-wider">Active</span>
+                                        <div className="flex items-center gap-3">
+                                            <span className="px-2 py-0.5 bg-green-500/10 text-green-500 text-[10px] rounded border border-green-500/20 uppercase font-bold tracking-wider">Active</span>
+                                            <button
+                                                onClick={startReconfigure}
+                                                className="text-neutral-400 hover:text-white transition-colors bg-neutral-800 hover:bg-neutral-700 px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-2 border border-neutral-700 hover:border-neutral-600"
+                                            >
+                                                <Settings size={14} />
+                                                Reconfigure Bot
+                                            </button>
+                                        </div>
                                     </div>
                                     <p className="text-sm text-neutral-400 mb-6">Your official number is connected via Meta Cloud API.</p>
 
