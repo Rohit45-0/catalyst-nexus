@@ -692,94 +692,87 @@ export default function WhatsAppBotPage() {
                                         </div>
                                     </div>
 
-                                    <div className="pt-4 border-t border-neutral-800 flex flex-col flex-1 overflow-hidden min-h-[400px]">
-                                        <label className="text-xs text-neutral-500 uppercase font-semibold mb-3 block flex-shrink-0">Weekly Schedule</label>
-
-                                        <div className="overflow-y-auto pr-2 space-y-3 custom-scrollbar flex-1 pb-4">
-                                            {Object.keys(slots.working_hours).map(day => {
-                                                const isActive = slots.working_hours[day].length > 0;
-
-                                                return (
-                                                    <div key={day} className="flex flex-col bg-neutral-800/30 p-3 rounded-xl border border-neutral-800">
-                                                        <div className="flex justify-between items-center mb-2">
-                                                            <span className={`text-sm capitalize font-medium ${isActive ? "text-neutral-200" : "text-neutral-500"}`}>{day}</span>
-                                                            <div className="flex items-center gap-2">
-                                                                {isActive && (
-                                                                    <button
-                                                                        onClick={() => {
-                                                                            const newHours = { ...slots.working_hours };
-                                                                            newHours[day] = [...slots.working_hours[day], { start: "09:00", end: "23:00" }];
-                                                                            setSlots({ ...slots, working_hours: newHours });
-                                                                        }}
-                                                                        className="text-neutral-400 hover:text-white bg-neutral-800 hover:bg-neutral-700 p-1.5 rounded transition-colors"
-                                                                        title="Add shift"
-                                                                    >
-                                                                        <Plus size={14} />
-                                                                    </button>
-                                                                )}
-                                                                <button
-                                                                    onClick={() => {
-                                                                        const newHours = { ...slots.working_hours };
-                                                                        newHours[day] = isActive ? [] : [{ start: "09:00", end: "23:00" }];
-                                                                        setSlots({ ...slots, working_hours: newHours });
-                                                                    }}
-                                                                    className={`text-[10px] px-2 py-1.5 rounded font-medium transition-colors ${isActive ? "bg-red-500/20 text-red-400 hover:bg-red-500/30" : "bg-green-500/20 text-green-400 hover:bg-green-500/30"}`}
-                                                                >
-                                                                    {isActive ? "Close Day" : "Open Day"}
-                                                                </button>
-                                                            </div>
-                                                        </div>
-
-                                                        {isActive ? (
-                                                            <div className="space-y-2">
-                                                                {slots.working_hours[day].map((block, idx) => (
-                                                                    <div key={idx} className="flex items-center gap-2 relative">
-                                                                        <input
-                                                                            type="time"
-                                                                            value={block.start}
-                                                                            onChange={(e) => {
-                                                                                const val = e.target.value;
-                                                                                const newHours = { ...slots.working_hours };
-                                                                                newHours[day][idx].start = val;
-                                                                                setSlots({ ...slots, working_hours: newHours });
-                                                                            }}
-                                                                            className="w-full bg-black border border-neutral-700/50 hover:border-neutral-600 focus:border-neutral-500 rounded-lg p-2 text-white text-xs text-center outline-none transition-colors"
-                                                                        />
-                                                                        <span className="text-neutral-600 text-xs font-medium">to</span>
-                                                                        <input
-                                                                            type="time"
-                                                                            value={block.end}
-                                                                            onChange={(e) => {
-                                                                                const val = e.target.value;
-                                                                                const newHours = { ...slots.working_hours };
-                                                                                newHours[day][idx].end = val;
-                                                                                setSlots({ ...slots, working_hours: newHours });
-                                                                            }}
-                                                                            className="w-full bg-black border border-neutral-700/50 hover:border-neutral-600 focus:border-neutral-500 rounded-lg p-2 text-white text-xs text-center outline-none transition-colors"
-                                                                        />
-                                                                        <button
-                                                                            onClick={() => {
-                                                                                const newHours = { ...slots.working_hours };
-                                                                                newHours[day].splice(idx, 1);
-                                                                                setSlots({ ...slots, working_hours: newHours });
-                                                                            }}
-                                                                            className="p-2 text-neutral-500 hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-colors"
-                                                                        >
-                                                                            <Trash2 size={14} />
-                                                                        </button>
-                                                                    </div>
-                                                                ))}
-                                                            </div>
-                                                        ) : (
-                                                            <div className="flex justify-center py-2 bg-black/20 rounded-lg border border-neutral-800/50">
-                                                                <span className="text-xs text-neutral-600 italic">Day off</span>
-                                                            </div>
-                                                        )}
-                                                    </div>
-                                                );
-                                            })}
-                                            <p className="mt-4 text-[11px] text-neutral-500 text-center pb-4">Set your daily hours here. You must hit "Save Configuration" at the bottom to apply changes.</p>
+                                    <div className="pt-4 border-t border-neutral-800 flex flex-col flex-1 overflow-visible">
+                                        <div className="flex items-center justify-between mb-4">
+                                            <label className="text-xs text-neutral-500 uppercase font-semibold block">Daily Operating Hours</label>
+                                            <span className="text-[10px] text-green-500 bg-green-500/10 px-2 py-1 rounded border border-green-500/20 font-semibold tracking-wide">Applies to all 7 days</span>
                                         </div>
+
+                                        <div className="bg-neutral-800/30 p-4 rounded-xl border border-neutral-800">
+                                            <div className="flex justify-between items-center mb-4">
+                                                <span className="text-sm font-medium text-neutral-200">Everyday Schedule</span>
+                                                <button
+                                                    onClick={() => {
+                                                        const newHours = { ...slots.working_hours };
+                                                        Object.keys(newHours).forEach(day => {
+                                                            newHours[day] = [...(newHours[day] || []), { start: "09:00", end: "23:00" }];
+                                                        });
+                                                        setSlots({ ...slots, working_hours: newHours });
+                                                    }}
+                                                    className="text-neutral-400 hover:text-white bg-neutral-800 hover:bg-neutral-700 p-1.5 px-3 rounded-lg transition-colors flex items-center gap-1.5 text-xs font-medium border border-neutral-700/50"
+                                                >
+                                                    <Plus size={14} /> Add Time Block
+                                                </button>
+                                            </div>
+
+                                            <div className="space-y-3">
+                                                {(slots.working_hours['monday'] || []).length === 0 ? (
+                                                    <div className="flex justify-center py-6 bg-black/20 rounded-lg border border-neutral-800/50">
+                                                        <span className="text-sm text-neutral-600 italic">Currently Marked as Closed</span>
+                                                    </div>
+                                                ) : (
+                                                    (slots.working_hours['monday'] || []).map((block, idx) => (
+                                                        <div key={idx} className="flex items-center gap-3 relative bg-black/40 p-2.5 rounded-lg border border-neutral-800/50">
+                                                            <input
+                                                                type="time"
+                                                                value={block.start}
+                                                                onChange={(e) => {
+                                                                    const val = e.target.value;
+                                                                    const newHours = { ...slots.working_hours };
+                                                                    Object.keys(newHours).forEach(day => {
+                                                                        if (newHours[day][idx]) newHours[day][idx].start = val;
+                                                                    });
+                                                                    setSlots({ ...slots, working_hours: newHours });
+                                                                }}
+                                                                className="w-full bg-black border border-neutral-700/50 hover:border-neutral-500 focus:border-neutral-400 rounded-md p-2.5 text-white text-sm font-medium text-center outline-none transition-all focus:ring-1 focus:ring-neutral-500"
+                                                            />
+                                                            <span className="text-neutral-500 text-[10px] font-bold uppercase tracking-wider">To</span>
+                                                            <input
+                                                                type="time"
+                                                                value={block.end}
+                                                                onChange={(e) => {
+                                                                    const val = e.target.value;
+                                                                    const newHours = { ...slots.working_hours };
+                                                                    Object.keys(newHours).forEach(day => {
+                                                                        if (newHours[day][idx]) newHours[day][idx].end = val;
+                                                                    });
+                                                                    setSlots({ ...slots, working_hours: newHours });
+                                                                }}
+                                                                className="w-full bg-black border border-neutral-700/50 hover:border-neutral-500 focus:border-neutral-400 rounded-md p-2.5 text-white text-sm font-medium text-center outline-none transition-all focus:ring-1 focus:ring-neutral-500"
+                                                            />
+                                                            <button
+                                                                onClick={() => {
+                                                                    const newHours = { ...slots.working_hours };
+                                                                    Object.keys(newHours).forEach(day => {
+                                                                        newHours[day].splice(idx, 1);
+                                                                    });
+                                                                    setSlots({ ...slots, working_hours: newHours });
+                                                                }}
+                                                                className="p-2.5 text-neutral-500 hover:text-red-400 hover:bg-red-500/10 rounded-md transition-colors"
+                                                                title="Remove Time Block"
+                                                            >
+                                                                <Trash2 size={16} />
+                                                            </button>
+                                                        </div>
+                                                    ))
+                                                )}
+                                            </div>
+                                        </div>
+
+                                        <p className="mt-4 text-[11px] text-neutral-500 text-center px-4 leading-relaxed">
+                                            These hours apply to <strong>every day of the week</strong>. <br />
+                                            {slots.slot_duration_minutes}-minute slots are mathematically generated between these times automatically!
+                                        </p>
                                     </div>
                                 </div>
 
