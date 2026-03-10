@@ -128,6 +128,71 @@ export default function DashboardPage() {
           </div>
         </div>
       </div>
+
+      {/* Upcoming Bookings Row */}
+      <UpcomingBookings />
+    </div>
+  );
+}
+
+function UpcomingBookings() {
+  const [bookings, setBookings] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Import here to avoid altering top-level imports significantly
+    import("axios").then(({ default: axios }) => {
+      import("../services/auth").then(({ getAccessToken }) => {
+        const PLUGINS_API = import.meta.env.VITE_PLUGINS_API_URL || "https://web-production-ba9e.up.railway.app";
+        axios.get(`${PLUGINS_API}/api/v1/dashboard/upcoming-bookings`, {
+          headers: { Authorization: `Bearer ${getAccessToken()}` }
+        })
+          .then(res => {
+            if (res.data?.data) {
+              setBookings(res.data.data);
+            }
+          })
+          .catch(err => console.error("Failed to load upcoming bookings", err))
+          .finally(() => setLoading(false));
+      });
+    });
+  }, []);
+
+  return (
+    <div className="mt-6 cn-card">
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-sm font-semibold text-neutral-900">Upcoming WhatsApp Bookings</h2>
+        <span className="text-[10px] text-emerald-600 bg-emerald-50 px-2 py-1 rounded border border-emerald-100 font-semibold tracking-wide">Live Google Calendar Sync</span>
+      </div>
+
+      {loading ? (
+        <div className="flex justify-center p-6"><span className="text-sm text-neutral-500">Loading sync data...</span></div>
+      ) : bookings.length === 0 ? (
+        <div className="flex justify-center p-6 border border-dashed border-neutral-200 rounded-lg">
+          <span className="text-sm text-neutral-500">No upcoming bookings found. They will appear here instantly!</span>
+        </div>
+      ) : (
+        <div className="overflow-x-auto">
+          <table className="w-full text-left border-collapse">
+            <thead>
+              <tr className="border-b border-neutral-100">
+                <th className="pb-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider font-medium">Customer/Details</th>
+                <th className="pb-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider font-medium">Date</th>
+                <th className="pb-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider font-medium text-right">Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              {bookings.map((b) => (
+                <tr key={b.id} className="border-b border-neutral-100 last:border-0 hover:bg-neutral-50 transition-colors">
+                  <td className="py-3 text-sm text-neutral-900 font-medium">{b.summary}</td>
+                  <td className="py-3 text-sm text-neutral-600">{b.date}</td>
+                  <td className="py-3 text-sm text-neutral-900 font-bold text-right">{b.time}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 }
