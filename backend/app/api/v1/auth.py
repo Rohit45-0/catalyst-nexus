@@ -239,9 +239,10 @@ async def refresh_token(
 
 
 @router.get("/google/login")
-async def google_login(request: Request, mode: str = "login"):
+async def google_login(request: Request, mode: str = "login", fallback: str = "http://localhost:5173"):
     """Initiates the Google OAuth2 login flow. Mode can be 'login' or 'register'."""
     request.session["google_auth_mode"] = mode
+    request.session["frontend_fallback"] = fallback
     redirect_uri = settings.GOOGLE_REDIRECT_URI
     if not redirect_uri:
         raise HTTPException(status_code=500, detail="Google OAuth not configured (missing redirect URI)")
@@ -252,7 +253,7 @@ async def google_login(request: Request, mode: str = "login"):
 async def google_callback(request: Request, db: Session = Depends(get_db)):
     """Handles the callback from Google, creates/logs in the user based on mode, and returns a JWT token."""
     mode = request.session.get("google_auth_mode", "login")
-    frontend_url = "http://localhost:5173"
+    frontend_url = request.session.get("frontend_fallback", "http://localhost:5173")
     
     try:
         token = await oauth.google.authorize_access_token(request)
@@ -309,7 +310,6 @@ async def google_callback(request: Request, db: Session = Depends(get_db)):
     
     # Redirect to frontend with the token as a query parameter
     # The frontend will read the token from the URL and store it in localStorage
-    frontend_url = "http://localhost:5173"
     from fastapi.responses import RedirectResponse
     return RedirectResponse(url=f"{frontend_url}/login?token={access_token}")
 

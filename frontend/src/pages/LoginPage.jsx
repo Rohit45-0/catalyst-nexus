@@ -18,7 +18,7 @@ export default function LoginPage({ onLogin }) {
     if (token) {
       localStorage.setItem("cn_access_token", token);
       onLogin?.();
-      navigate("/");
+      navigate("/dashboard");
     }
 
     // Handle error redirects from Google OAuth
@@ -37,7 +37,7 @@ export default function LoginPage({ onLogin }) {
     try {
       await login(email, password);
       onLogin?.();
-      navigate("/");
+      navigate("/dashboard");
     } catch (err) {
       // Show the actual backend error message
       const msg = err.message || "Login failed. Check your credentials.";
@@ -122,7 +122,8 @@ export default function LoginPage({ onLogin }) {
               type="button"
               onClick={() => {
                 const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "/api/v1";
-                window.location.href = `${apiBaseUrl}/auth/google/login`;
+                const fallback = window.location.origin;
+                window.location.href = `${apiBaseUrl}/auth/google/login?fallback=${encodeURIComponent(fallback)}`;
               }}
               className="w-full flex items-center justify-center gap-3 py-2.5 rounded-lg border border-neutral-200 text-sm font-medium text-neutral-700 bg-white hover:bg-neutral-50 transition-colors shadow-sm"
             >

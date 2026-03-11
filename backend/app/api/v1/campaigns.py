@@ -25,6 +25,14 @@ logger = logging.getLogger(__name__)
 
 # ─── Response Schemas ─────────────────────────────────────────────────────────
 
+class BotGenerateRequest(BaseModel):
+    user_id: str
+    type: str # video, poster, blog
+    prompt: str
+    phone_number: str
+    phone_number_id: Optional[str] = None
+
+
 class CampaignSummary(BaseModel):
     id: str
     product_name: str
@@ -130,3 +138,74 @@ async def delete_campaign(
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Campaign not found")
     db.delete(row)
     db.commit()
+
+
+@router.post("/generate-via-bot", summary="Trigger generation from WhatsApp Bot")
+async def generate_via_bot(req: BotGenerateRequest):
+    """Triggered by the Plugins service asynchronously when the owner texts the bot."""
+    import asyncio
+    import httpx
+    
+    async def bg_generate():
+        try:
+            from openai import AsyncOpenAI
+            from backend.app.core.config import settings
+            client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
+            
+            gen_type = req.type.lower()
+            webhook_url = "http://localhost:8001/api/v1/whatsapp/system-alert"
+            # Hardcode to railway URL if deployed, assuming localhost for dev
+            payload = {
+                "user_id": req.user_id,
+                "phone_number": req.phone_number,
+                "phone_number_id": req.phone_number_id,
+            }
+            
+            if "video" in gen_type:
+                # Mock video URL mapping
+                await asyncio.sleep(5)
+                payload["video_url"] = "https://www.w3schools.com/html/mov_bbb.mp4"
+                payload["message"] = f"Here is your AI generated {gen_type} for: '{req.prompt}'!\n\n(Note: Neural Render takes ~5 mins. Sending this preview MP4 for Demo purposes)."
+                
+            elif "poster" in gen_type or "image" in gen_type:
+                # Generate DALL-E image
+                res = await client.images.generate(
+                    model="dall-e-3",
+                    prompt=f"A beautiful promotional poster for a local business. Theme: {req.prompt}. Professional, high quality, eye-catching textless design.",
+                    size="1024x1024",
+                    quality="standard",
+                    n=1
+                )
+                payload["image_url"] = res.data[0].url
+                payload["message"] = f"Here is your AI generated {gen_type} for: '{req.prompt}'!"
+                
+            else: # blog or text
+                res = await client.chat.completions.create(
+                    model="gpt-4o-mini",
+                    messages=[{"role": "user", "content": f"Write a short, engaging promotional message/blog post for WhatsApp about: {req.prompt}"}],
+                    max_tokens=600
+                )
+                payload["message"] = f"Here is your generated {gen_type} text:\n\n{res.choices[0].message.content}"
+            
+            # Send results back to plugins webhook
+            async with httpx.AsyncClient(timeout=30.0) as http_client:
+                print("Sending generated alert to plugin webhook:", webhook_url)
+                await http_client.post(webhook_url, json=payload)
+                
+        except Exception as e:
+            logger.error(f"WhatsApp generation failed: {e}")
+            try:
+                async with httpx.AsyncClient(timeout=10.0) as http_client:
+                    await http_client.post(webhook_url, json={
+                        "user_id": req.user_id,
+                        "phone_number": req.phone_number,
+                        "phone_number_id": req.phone_number_id,
+                        "message": f"❌ Failed to generate {req.type}. Error: {e}"
+                    })
+            except Exception as e2:
+                print(f"Failed to send error alert: {e2}")
+
+    # Launch background task
+    asyncio.create_task(bg_generate())
+    return {"status": "queued"}
+

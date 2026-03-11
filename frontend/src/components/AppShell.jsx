@@ -8,7 +8,7 @@ import {
   Users,
   Library,
   BarChart2,
-  Bot,
+  BotMessageSquare,
   Settings,
   Plus,
   LogOut,
@@ -24,7 +24,7 @@ const navItems = [
   { to: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
   { to: "/campaigns", icon: Megaphone, label: "Campaigns" },
   { to: "/market-scout", icon: Globe, label: "Market Scout" },
-  { to: "/whatsapp-bot", icon: Bot, label: "WhatsApp Bot Manager" },
+  { to: "/assistant", icon: BotMessageSquare, label: "AI Assistant (History)" },
   { to: "/content-library", icon: Library, label: "Content Library" },
 ];
 
@@ -79,7 +79,7 @@ export default function AppShell({ onLogout }) {
       {/* Icon-only Sidebar */}
       <aside className="flex flex-col items-center w-18 border-r border-neutral-200 bg-white py-4 gap-1 flex-shrink-0" style={{ width: '72px' }}>
         {/* Logo / Brand */}
-        <div className="flex items-center justify-center w-11 h-11 bg-neutral-900 rounded-xl mb-3 cursor-pointer" onClick={() => navigate("/")}>
+        <div className="flex items-center justify-center w-11 h-11 bg-neutral-900 rounded-xl mb-3 cursor-pointer" onClick={() => navigate("/dashboard")}>
           <Zap size={20} className="text-white" strokeWidth={2.5} />
         </div>
 

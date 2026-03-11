@@ -43,6 +43,14 @@ class ScoutRequest(BaseModel):
     region: str = Field("IN", description="2-char region code")
 
 
+class BotScoutRequest(BaseModel):
+    user_id: str
+    product_name: str
+    category: str
+    phone_number: str
+    phone_number_id: str
+
+
 class CompetitorResult(BaseModel):
     url: str
     title: str
@@ -214,15 +222,9 @@ def _extract_key_points(markdown: str, max_points: int = 4) -> List[str]:
     status_code=status.HTTP_200_OK,
     summary="Market Scout — Full Step 2 Pipeline (Firecrawl + LLM)",
 )
-async def market_scout_analyze(
-    body: ScoutRequest,
-    current_user: Annotated[User, Depends(get_current_user)],
-):
+async def _run_market_scout_logic(body: ScoutRequest) -> ScoutResponse:
     """
-    Full market scouting pipeline:
-    1. Firecrawl web search → competitor content + trending posts
-    2. Optional direct URL scraping
-    3. LLM gap analysis on all collected content
+    Core reusable logic for market scouting pipeline.
     """
     logger.info(f"🔍 Market Scout: product='{body.product_name}', category='{body.category}'")
 
@@ -335,6 +337,81 @@ async def market_scout_analyze(
         firecrawl_credits_used=credits_used,
         data_sources=list(dict.fromkeys(data_sources)),
     )
+
+@router.post(
+    "/analyze",
+    response_model=ScoutResponse,
+    status_code=status.HTTP_200_OK,
+    summary="Market Scout — Full Step 2 Pipeline (Firecrawl + LLM)",
+)
+async def market_scout_analyze(
+    body: ScoutRequest,
+    current_user: Annotated[User, Depends(get_current_user)],
+):
+    """
+    Full market scouting pipeline:
+    1. Firecrawl web search → competitor content + trending posts
+    2. Optional direct URL scraping
+    3. LLM gap analysis on all collected content
+    """
+    return await _run_market_scout_logic(body)
+
+
+@router.post("/research-via-bot", summary="Trigger Market Scout via WhatsApp Bot")
+async def research_via_bot(req: BotScoutRequest):
+    import asyncio
+    import httpx
+    
+    async def bg_scout():
+        webhook_url = "http://localhost:8001/api/v1/whatsapp/system-alert"
+        try:
+            body = ScoutRequest(
+                product_name=req.product_name,
+                category=req.category,
+                keywords=[],
+                region="IN"
+            )
+            res: ScoutResponse = await _run_market_scout_logic(body)
+            
+            # Format the answer for WhatsApp
+            msg = f"📊 *Market Scout Report: {req.product_name}*\n\n"
+            msg += f"💡 *Opportunity Gap:*\n_{res.gap_analysis.opportunity_gap}_\n\n"
+            msg += "*Top Questions from Customers:*\n"
+            for q in res.gap_analysis.top_questions[:3]:
+                msg += f"• {q}\n"
+            msg += "\n*Winning Viral Hooks:*\n"
+            for h in res.gap_analysis.viral_hooks[:3]:
+                msg += f"• {h}\n"
+            msg += "\n*Recommended Angles:*\n"
+            for r in res.gap_analysis.recommended_angles[:2]:
+                msg += f"• {r}\n"
+                
+            payload = {
+                "user_id": req.user_id,
+                "phone_number": req.phone_number,
+                "phone_number_id": req.phone_number_id,
+                "message": msg
+            }
+            
+            async with httpx.AsyncClient(timeout=30.0) as http_client:
+                print("Sending market scout report to plugin webhook:", webhook_url)
+                await http_client.post(webhook_url, json=payload)
+                
+        except Exception as e:
+            logger.error(f"WhatsApp research failed: {e}")
+            try:
+                async with httpx.AsyncClient(timeout=10.0) as http_client:
+                    await http_client.post(webhook_url, json={
+                        "user_id": req.user_id,
+                        "phone_number": req.phone_number,
+                        "phone_number_id": req.phone_number_id,
+                        "message": f"❌ Failed to run market research. Error: {e}"
+                    })
+            except Exception as e2:
+                print(f"Failed to send error alert: {e2}")
+
+    asyncio.create_task(bg_scout())
+    return {"status": "queued"}
 
 
 @router.get(

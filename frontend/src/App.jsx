@@ -9,11 +9,12 @@ import CreateCampaignPage from "./pages/CreateCampaignPage";
 import CompetitorIntelPage from "./pages/CompetitorIntelPage";
 import ContentLibraryPage from "./pages/ContentLibraryPage";
 import AnalyticsPage from "./pages/AnalyticsPage";
-import WhatsAppBotPage from "./pages/WhatsAppBotPage";
+import AssistantPage from "./pages/AssistantPage";
 import SettingsPage from "./pages/SettingsPage";
 import CreditsPage from "./pages/CreditsPage";
 import ProductIntakePage from "./pages/ProductIntakePage";
 import MarketScoutPage from "./pages/MarketScoutPage";
+import LandingPage from "./pages/LandingPage";
 import { getAccessToken, clearAccessToken } from "./services/auth";
 
 // Auth context via simple prop drilling — no external lib needed
@@ -36,24 +37,24 @@ export default function App() {
 
   return (
     <Routes>
+      <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
       <Route path="/register" element={<RegisterPage onLogin={handleLogin} />} />
 
       <Route
-        path="/"
         element={
           <ProtectedRoute isAuthed={isAuthed}>
             <AppShell onLogout={handleLogout} />
           </ProtectedRoute>
         }
       >
-        <Route index element={<HomePage />} />
+        <Route path="home" element={<HomePage />} />
         <Route path="dashboard" element={<DashboardPage />} />
         <Route path="campaigns" element={<CreateCampaignPage />} />
         <Route path="competitor-intel" element={<CompetitorIntelPage />} />
         <Route path="content-library" element={<ContentLibraryPage />} />
         <Route path="analytics" element={<AnalyticsPage />} />
-        <Route path="whatsapp-bot" element={<WhatsAppBotPage />} />
+        <Route path="assistant" element={<AssistantPage />} />
         <Route path="settings" element={<SettingsPage />} />
         <Route path="product-intake" element={<ProductIntakePage />} />
         <Route path="market-scout" element={<MarketScoutPage />} />

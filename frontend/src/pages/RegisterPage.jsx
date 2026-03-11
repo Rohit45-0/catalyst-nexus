@@ -17,7 +17,7 @@ export default function RegisterPage({ onLogin }) {
       const username = form.email.split('@')[0].padEnd(3, '0');
       await register({ email: form.email, password: form.password, full_name: form.full_name, username });
       onLogin?.();
-      navigate("/");
+      navigate("/dashboard");
     } catch (err) {
       setError(err.message || "Registration failed");
     } finally {
@@ -92,7 +92,8 @@ export default function RegisterPage({ onLogin }) {
               type="button"
               onClick={() => {
                 const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "/api/v1";
-                window.location.href = `${apiBaseUrl}/auth/google/login?mode=register`;
+                const fallback = window.location.origin;
+                window.location.href = `${apiBaseUrl}/auth/google/login?mode=register&fallback=${encodeURIComponent(fallback)}`;
               }}
               className="w-full flex items-center justify-center gap-3 py-2.5 rounded-lg border border-neutral-200 text-sm font-medium text-neutral-700 bg-white hover:bg-neutral-50 transition-colors shadow-sm"
             >
